@@ -1,0 +1,1030 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paul Ritter — мебель с характером</title>
+<style>
+:root{--cream:#fbf3e5;--paper:#fffdf9;--ivory:#f4e6cd;--sand:#dfc9a5;--wine:#a62d43;--burg:#500f1c;--ink:#2f1118;--muted:#745964;--line:rgba(80,15,28,.16);--shadow:0 22px 70px rgba(80,15,28,.12)}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{background:var(--cream);color:var(--ink);font-family:Arial,sans-serif;line-height:1.55;overflow-x:hidden}a{text-decoration:none;color:inherit}button,input,textarea{font:inherit}.container{width:calc(100% - 6cm);max-width:none;margin-left:3cm;margin-right:3cm}.hero .container,section>.container,footer>.container{width:calc(100% - 6cm);margin-left:3cm;margin-right:3cm}.serif,h1,h2,h3,.logo,.stat strong{font-family:Georgia,serif;font-weight:400}.eyebrow{display:inline-flex;align-items:center;gap:10px;color:var(--wine);font-size:11px;font-weight:800;letter-spacing:1.8px;text-transform:uppercase}.eyebrow:before{content:"";width:28px;height:1px;background:var(--wine)}.btn{display:inline-flex;justify-content:center;align-items:center;gap:10px;border:1px solid var(--wine);background:var(--wine);color:#fffaf1;padding:15px 24px;border-radius:999px;text-transform:uppercase;letter-spacing:1px;font-size:12px;font-weight:800;cursor:pointer;transition:.3s}.btn:hover{background:var(--burg);border-color:var(--burg);transform:translateY(-3px);box-shadow:0 12px 28px rgba(80,15,28,.18)}.btn.alt{background:transparent;color:var(--wine)}.btn.alt:hover{background:var(--wine);color:#fffaf1}.site-card{background:var(--paper);border:1px solid var(--line);border-radius:28px;box-shadow:0 12px 45px rgba(80,15,28,.045)}
+header{position:fixed;z-index:20;top:0;left:0;right:0;background:rgba(251,243,229,.88);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}.nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:25px}.logo{font-size:27px;color:var(--burg);letter-spacing:.3px}.nav-links{display:flex;gap:27px;font-size:13px;font-weight:700}.nav-links a{transition:.2s}.nav-links a:hover{color:var(--wine)}.nav-actions{display:flex;align-items:center;gap:10px}.tg{width:39px;height:39px;border-radius:50%;display:grid;place-items:center;background:var(--wine);color:#fff;font-weight:800}.phone{border:1px solid var(--wine);background:transparent;color:var(--wine);padding:10px 15px;border-radius:999px;font-size:12px;font-weight:800;cursor:pointer}.phone:hover{background:var(--wine);color:#fff}.copy-toast{position:fixed;right:20px;top:92px;z-index:40;background:var(--burg);color:#fff;padding:11px 16px;border-radius:10px;font-size:13px;opacity:0;transform:translateY(-8px);pointer-events:none;transition:.3s}.copy-toast.show{opacity:1;transform:none}
+.hero{min-height:100vh;padding:100px 0 28px;display:flex;align-items:center}.hero-card{padding:clamp(36px,4vw,58px);overflow:hidden;position:relative}.hero-grid{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:clamp(38px,4.5vw,70px)}.hero h1{font-size:clamp(42px,5.5vw,76px);line-height:1.03;letter-spacing:-2px;color:var(--burg);max-width:620px;margin:20px 0 23px}.lead{font-size:18px;line-height:1.65;color:var(--muted);max-width:565px}.hero-buttons{display:flex;flex-wrap:wrap;gap:12px;margin:31px 0 42px}.stats{display:flex;gap:36px;flex-wrap:wrap}.stat strong{display:block;color:var(--wine);font-size:26px;line-height:1.15;margin-bottom:4px}.stat span{font-size:12px;color:var(--muted);max-width:120px;display:block}.hero-art{min-height:clamp(410px,64vh,530px);position:relative;display:grid;place-items:center}.hero-art:before{content:"";position:absolute;inset:30px -22px -24px 25px;background:var(--ivory);border:1px solid var(--sand);border-radius:20px 110px 20px 20px;transform:rotate(2deg)}.art-frame{position:relative;width:min(100%,560px);height:clamp(390px,58vh,470px);overflow:hidden;border-radius:20px 105px 20px 20px;background:linear-gradient(145deg,#6e3540,#29111b 55%,#af7b55);box-shadow:var(--shadow);border:8px solid var(--paper)}.art-frame:before{content:"";position:absolute;inset:0;background:linear-gradient(115deg,rgba(255,255,255,.25),transparent 28%,rgba(0,0,0,.25));z-index:3}.art-window{position:absolute;inset:33px 33px 80px 33px;border:2px solid rgba(255,236,194,.7);border-radius:12px 80px 12px 12px}.art-window:before,.art-window:after{content:"";position:absolute;background:rgba(255,226,165,.6)}.art-window:before{width:2px;top:0;bottom:0;left:56%}.art-window:after{height:2px;left:0;right:0;top:48%}.art-table{position:absolute;left:50px;right:45px;bottom:105px;height:22px;border-radius:50%;background:#b98555;box-shadow:0 8px 0 #663d31,0 14px 0 rgba(0,0,0,.2)}.art-leg{position:absolute;width:12px;height:170px;background:#17151a;bottom:-66px;transform:rotate(12deg);left:115px}.art-leg.two{left:auto;right:118px;transform:rotate(-12deg)}.art-chair{position:absolute;bottom:58px;right:90px;width:92px;height:125px;border:12px solid #1b1720;border-bottom:0;border-radius:28px 28px 4px 4px;transform:skewY(-5deg)}.art-chair:after{content:"";position:absolute;left:32px;top:100px;width:10px;height:82px;background:#1b1720;box-shadow:38px -4px 0 #1b1720}.art-plant{position:absolute;left:42px;bottom:45px;width:50px;height:60px;background:#321b20;border-radius:0 0 18px 18px}.art-plant:before{content:"✦";position:absolute;color:#c58865;font-size:100px;left:-25px;top:-100px;transform:rotate(20deg)}.art-label{position:absolute;z-index:4;left:25px;bottom:23px;color:#fff3dd;font-size:11px;letter-spacing:2px;font-weight:800}.hero-art-img-wrap{position:relative;width:100%;height:100%;display:none;overflow:hidden;border-radius:12px 97px 12px 12px}
+.hero-art-img{width:100%;height:100%;object-fit:cover;display:block}
+.hero-art-edit-btn{position:absolute;top:14px;right:14px;z-index:12;background:rgba(36,6,11,0.88);color:#fff8ef;border:1px solid rgba(255,255,255,0.35);border-radius:6px;padding:6px 12px;font-size:12px;font-weight:700;cursor:pointer;backdrop-filter:blur(6px);display:none;align-items:center;gap:4px;transition:background .2s,transform .2s}
+.hero-art-edit-btn:hover{background:#800020;transform:scale(1.04)}
+.is-admin-mode .hero-art-edit-btn{display:flex}
+.floating-note{position:absolute;z-index:5;bottom:12px;left:-25px;background:var(--paper);padding:15px;border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);width:220px}
+.floating-note b{display:block;font-family:Georgia,serif;color:var(--burg);font-size:18px;margin-bottom:3px}
+.floating-note span{font-size:12px;color:var(--muted)}
+section{min-height:calc(100vh - 78px);padding:24px 0;display:flex;align-items:center}.section-head{text-align:center;margin-bottom:clamp(28px,4vh,42px)}.section-head h2{font-size:clamp(31px,4vw,49px);color:var(--burg);line-height:1.1;margin:12px auto 12px}.section-head p{max-width:650px;margin:auto;color:var(--muted);font-size:16px}.process-card{padding:clamp(34px,4vw,58px)}.process-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:clamp(10px,1.2vw,15px)}.step{position:relative;padding:28px 20px 24px;background:var(--cream);border:1px solid var(--line);border-radius:18px;transition:.3s;display:flex;flex-direction:column;align-items:center;text-align:center}.step:hover{transform:translateY(-8px);border-color:var(--wine);box-shadow:0 15px 30px rgba(80,15,28,.08)}.step-num{display:none}.step h3{font-size:16px;color:var(--burg);line-height:1.2;margin-bottom:12px;text-align:center}.step p{font-size:13px;color:var(--muted);line-height:1.5;text-align:center}.step-icon{width:60px;height:60px;border-radius:50%;background:var(--cream);border:2px solid var(--wine);display:grid;place-items:center;color:var(--wine);font-size:28px;font-weight:700;margin:0 auto 22px;transition:background .3s ease,color .3s ease,transform .3s ease,box-shadow .3s ease}.step:hover .step-icon{background:var(--wine);color:#fff;transform:scale(1.1);box-shadow:0 8px 18px rgba(166,45,67,.25);border-color:var(--wine)}.center-cta{text-align:center;margin-top:36px}
+.catalog-section{padding:24px 0}.catalog-card{padding:clamp(34px,4vw,58px);min-height:calc(100vh - 126px)}.category-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:clamp(9px,1.1vw,14px)}.category{position:relative;min-height:clamp(300px,49vh,390px);border-radius:18px;overflow:hidden;border:1px solid var(--line);cursor:pointer;background:#3b1720;transition:.45s}.category:hover{transform:translateY(-8px);box-shadow:var(--shadow)}.category-bg{position:absolute;inset:0;transition:.45s}.category:hover .category-bg{transform:scale(1.08)}.category:nth-child(1) .category-bg{background:linear-gradient(150deg,#bd8d62,#613d35 44%,#24131a)}.category:nth-child(2) .category-bg{background:linear-gradient(150deg,#748058,#dbc28e 45%,#2c4036)}.category:nth-child(3) .category-bg{background:linear-gradient(150deg,#b98b74,#56484b 45%,#1e1c26)}.category:nth-child(4) .category-bg{background:linear-gradient(150deg,#a75b6b,#e5c59a 47%,#54212e)}.category:nth-child(5) .category-bg{background:linear-gradient(150deg,#64747c,#c7a77b 45%,#1e2930)}.category-bg:before{content:"";position:absolute;width:75%;height:38%;left:12%;bottom:25%;border:7px solid rgba(255,237,200,.8);border-bottom-width:11px;transform:skewY(-8deg);border-radius:5px}.category-bg:after{content:"";position:absolute;width:12px;height:48%;left:28%;bottom:5%;background:rgba(25,14,19,.85);box-shadow:135px 16px 0 rgba(25,14,19,.85);transform:rotate(7deg)}.category:nth-child(2) .category-bg:before{border-radius:50%;width:58%;height:27%;left:22%;bottom:20%}.category:nth-child(3) .category-bg:before{width:52%;height:52%;left:25%;bottom:16%;transform:none}.category:nth-child(4) .category-bg:before{width:62%;height:62%;left:19%;bottom:16%;transform:rotate(45deg);border-width:5px}.category:nth-child(5) .category-bg:before{width:70%;height:17%;left:15%;bottom:28%;transform:skewY(-10deg)}.category-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(35,9,17,.92),rgba(35,9,17,.05) 72%)}.category-content{position:absolute;left:18px;right:18px;bottom:18px;color:#fff8eb}.category-kicker{font-size:10px;letter-spacing:2px;font-weight:800;opacity:.8}.category h3{font-size:23px;line-height:1.1;margin:7px 0}.category p{font-size:12px;line-height:1.4;opacity:.88}.catalog-back{display:none;margin-top:22px}.catalog-back.open{display:block}.back-top{display:flex;align-items:center;justify-content:space-between;gap:18px;padding-bottom:20px;border-bottom:1px solid var(--line);margin-bottom:23px}.back-top h3{font-size:31px;color:var(--burg)}.back-btn{border:1px solid var(--line);background:var(--cream);border-radius:99px;padding:10px 15px;color:var(--wine);font-weight:800;cursor:pointer}.products{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;max-width:760px}.product{overflow:hidden;border:1px solid var(--line);border-radius:16px;background:var(--cream)}.product-art{height:170px;position:relative;background:linear-gradient(140deg,#b88762,#4d252e)}.product-art:before{content:"";position:absolute;left:18%;right:18%;top:27%;height:32%;border:6px solid #f0d6aa;transform:skewY(-7deg)}.product-art:after{content:"";position:absolute;left:30%;right:30%;bottom:8%;height:45%;border-left:8px solid #25151b;border-right:8px solid #25151b}.product:nth-child(2) .product-art{background:linear-gradient(140deg,#79815e,#2d4037)}.product:nth-child(3) .product-art{background:linear-gradient(140deg,#bd8b91,#4a1f29)}.product-info{padding:18px}.product h4{font-size:18px;color:var(--burg);margin-bottom:6px}.product p{font-size:13px;color:var(--muted);min-height:42px}.price{font-weight:800;color:var(--wine);margin:12px 0}.product .btn{width:100%;padding:11px;font-size:11px}
+.about{padding:24px 0}.about-card{padding:clamp(34px,4vw,55px)}.about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}.about-copy h2{font-size:clamp(32px,4vw,52px);line-height:1.08;color:var(--burg);margin:14px 0 20px}.about-copy p{color:var(--muted);font-size:16px;max-width:500px;margin-bottom:15px}.promise-list{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:25px}.promise{padding:16px;border-top:1px solid var(--line);font-size:13px;color:var(--burg);font-weight:700}.promise span{display:block;color:var(--muted);font-weight:400;margin-top:3px}.about-art{min-height:360px;border-radius:20px;background:linear-gradient(135deg,#f0dec1,#a96c68 48%,#471721);position:relative;overflow:hidden}.about-art:before{content:"";position:absolute;left:14%;right:14%;top:18%;height:58%;border:2px solid rgba(255,245,225,.7);border-radius:50%;transform:rotate(-19deg)}.about-art:after{content:"PAUL\A RITTER";white-space:pre;position:absolute;right:28px;bottom:24px;color:#fff2d8;font:30px Georgia,serif;letter-spacing:4px;line-height:1.1;text-align:right}.quote{position:absolute;left:28px;top:28px;color:#fff8eb;font:italic 22px Georgia,serif;max-width:230px;line-height:1.25}
+.order{min-height:calc(100vh - 78px);display:flex;align-items:center;background:var(--burg);color:#fff8eb;padding:42px 0}.order-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}.order h2{font-size:clamp(35px,4vw,55px);line-height:1.08;margin:15px 0 22px}.order p{color:#e6cdb0;max-width:480px;margin-bottom:14px}.form-box{background:var(--paper);color:var(--ink);border-radius:20px;padding:32px}.form-box h3{font-size:27px;color:var(--burg);margin-bottom:22px}.field{margin-bottom:15px}.field label{display:block;font-size:12px;color:var(--muted);font-weight:800;margin-bottom:6px}.field input,.field textarea{width:100%;border:1px solid var(--line);background:var(--cream);border-radius:8px;padding:12px 13px;color:var(--ink);outline:none}.field input:focus,.field textarea:focus{border-color:var(--wine);box-shadow:0 0 0 3px rgba(166,45,67,.1)}.form-box .btn{width:100%;margin-top:4px}.form-note{font-size:11px;color:var(--muted);text-align:center;margin-top:10px}
+footer{background:#2c0b13;color:#dcbfa2;padding:48px 0 26px}.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:35px;padding-bottom:32px;border-bottom:1px solid rgba(255,255,255,.13)}.footer-logo{font:30px Georgia,serif;color:#fff5e5;margin-bottom:13px}.footer-grid p,.footer-grid a{font-size:13px;display:block;margin:7px 0;color:#dcbfa2}.footer-grid h4{color:#fff5e5;margin-bottom:15px}.copyright{text-align:center;font-size:11px;margin-top:22px;color:#ab7f78}
+@media(max-width:1050px){.hero-grid,.about-grid,.order-grid{grid-template-columns:1fr}.hero-art{min-height:440px}.process-grid{grid-template-columns:repeat(3,1fr)}.category-grid{grid-template-columns:repeat(3,1fr)}.category{min-height:310px}.nav-links{display:none}.hero-card,.process-card,.catalog-card,.about-card{padding:38px}}
+@media(max-width:650px){.container,.hero .container,section>.container,footer>.container{width:calc(100% - 24px);margin-left:12px;margin-right:12px}.nav{height:67px}.logo{font-size:23px}.nav-actions .phone{font-size:0;padding:10px;width:39px;height:39px}.nav-actions .phone:before{content:"☎";font-size:15px}.hero{padding-top:94px}.hero-card{padding:28px 20px;border-radius:20px}.hero h1{font-size:43px;letter-spacing:-1px}.lead{font-size:16px}.hero-buttons{flex-direction:column}.hero-buttons .btn{width:100%}.stats{gap:17px}.stat strong{font-size:21px}.hero-art{min-height:360px;margin-top:25px}.art-frame{height:340px;border-radius:15px 75px 15px 15px}.floating-note{left:5px;bottom:0;width:180px}.process-grid,.category-grid,.products{grid-template-columns:1fr}.process-card,.catalog-card,.about-card{padding:30px 20px}.section-head{margin-bottom:28px}.category{min-height:270px}.back-top{align-items:flex-start;flex-direction:column}.back-top h3{font-size:27px}.promise-list{grid-template-columns:1fr}.form-box{padding:23px 18px}.footer-grid{grid-template-columns:1fr}}
+.category-grid{display:flex;align-items:stretch;gap:12px}.category-grid:hover .category{flex:.82}.category-grid:hover .category:hover{flex:2.9;transform:translateY(-8px)}.category{flex:1;min-width:0;transition:flex .55s cubic-bezier(.25,1,.5,1),transform .45s,box-shadow .45s}.category-content{transition:transform .45s ease}.category-grid:hover .category:not(:hover) .category-content{transform:translateY(10px)}.category p{opacity:.78;max-height:60px;overflow:hidden;transition:opacity .35s ease,transform .35s ease}.category:hover p{opacity:1}.category:after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(115deg,transparent 25%,rgba(255,255,255,.18) 43%,transparent 58%);transform:translateX(-120%);transition:transform .8s ease}.category:hover:after{transform:translateX(120%)}@media(max-width:1050px){.category-grid{display:grid}.category{flex:unset}.category-grid:hover .category,.category-grid:hover .category:hover{flex:unset}}\n.catalog-stage{perspective:1800px}.catalog-card{position:relative;min-height:620px;transform-style:preserve-3d;transition:transform .9s cubic-bezier(.4,.2,.2,1)}.catalog-card.is-flipped{transform:rotateY(180deg)}.catalog-face{position:absolute;inset:0;padding:clamp(34px,4vw,58px);backface-visibility:hidden;-webkit-backface-visibility:hidden;overflow:hidden}.catalog-front{transform:rotateY(0deg)}.catalog-back{display:block;transform:rotateY(180deg);margin-top:0}.catalog-back .products{max-height:none;overflow:visible;padding-right:5px}@media(max-width:1050px){.catalog-card{min-height:720px}.catalog-face{padding:38px}}@media(max-width:650px){.catalog-card{min-height:760px}.catalog-face{padding:30px 20px}.catalog-back .products{max-height:590px}}.catalog-front .eyebrow{display:none}.catalog-front .section-head{margin-bottom:24px}.catalog-front .section-head h2{margin-top:0;margin-bottom:10px}.catalog-front .section-head p{font-size:13px}.catalog-card{min-height:clamp(460px,calc(100vh - 150px),620px)}.catalog-front{display:flex;flex-direction:column}.catalog-front .category-grid{flex:1;min-height:0;height:clamp(245px,36vh,330px)}.catalog-front .category{min-height:0;height:100%;border-radius:12px}.catalog-front .category-grid{gap:10px}.catalog-front .category-grid:hover .category{flex:.78}.catalog-front .category-grid:hover .category:hover{flex:3.2;transform:translateY(-3px)}.catalog-front .category-content{left:14px;right:14px;bottom:16px;transition:all .45s cubic-bezier(.25,1,.5,1)}.catalog-front .category-btn{opacity:0;visibility:hidden;margin-top:12px}.catalog-front .category:hover .category-content{left:14px;right:auto;bottom:16px;width:min(292px,calc(100% - 28px));padding:16px 16px 14px;background:var(--paper);color:var(--burg);border:1px solid rgba(80,15,28,.12);border-radius:10px;box-shadow:0 12px 28px rgba(35,9,17,.22);transform:none}.catalog-front .category:hover .category-btn{opacity:1;visibility:visible}.catalog-front .category:hover .category-kicker{opacity:0}.catalog-front .category-kicker{position:absolute;left:50%;bottom:0;transform:translateX(-50%) rotate(180deg);writing-mode:vertical-rl;white-space:nowrap;font-size:9px;letter-spacing:2px;opacity:.9;transition:opacity .3s ease}.catalog-front .category h3,.catalog-front .category p{opacity:0;visibility:hidden;transform:translateY(12px);max-height:0;margin:0;overflow:hidden;transition:opacity .3s ease,transform .35s ease,max-height .35s ease,margin .35s ease}.catalog-front .category:hover .category-kicker{opacity:0}.catalog-front .category:hover h3,.catalog-front .category:hover p{opacity:1;visibility:visible;transform:translateY(0);max-height:100px}.catalog-front .category:hover h3{margin:7px 0}.catalog-front .category:hover p{margin-top:0}.catalog-front .category p{font-size:11px;line-height:1.35}.catalog-front .category:after{opacity:.55}.catalog-front .category:hover:after{opacity:1}@media(max-width:1050px){.catalog-front .category-grid{height:auto}.catalog-front .category{min-height:250px;height:250px}.catalog-front .category h3,.catalog-front .category p{opacity:1;visibility:visible;transform:none;max-height:100px}.catalog-front .category-kicker{display:none}.catalog-front .category-content{bottom:14px}}@media(max-width:650px){.catalog-card{min-height:760px}.catalog-front .section-head{margin-bottom:24px}.catalog-front .category-grid{height:auto}.catalog-front .category{height:220px}.catalog-front .category h3{font-size:21px}.catalog-front .category p{font-size:12px}.catalog-front .category-content{transition:all .45s cubic-bezier(.25,1,.5,1)}
+.catalog-front .category:hover .category-content{left:14px;right:auto;bottom:16px;width:min(260px,calc(100% - 28px));padding:16px 16px 14px;background:var(--paper);color:var(--burg);border:1px solid rgba(80,15,28,.12);border-radius:10px;box-shadow:0 12px 28px rgba(35,9,17,.22);transform:none}
+.catalog-front .category:hover .category-kicker{display:none}
+.catalog-front .category:hover h3{color:var(--burg);font-size:18px;line-height:1.15;margin:0 0 6px;opacity:1;visibility:visible;max-height:100px;transform:none}
+.catalog-front .category:hover p{color:var(--muted);font-size:11px;line-height:1.35;margin:0 0 12px;opacity:1;visibility:visible;max-height:100px;transform:none}
+.category-btn{display:block;width:100%;padding:10px 8px;border:1px solid #B8787D;border-radius:2px;background:#FFF8EF;color:#B8787D;font-family:Arial,sans-serif;font-size:10px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;cursor:pointer;transition:background .3s ease,color .3s ease,border-color .3s ease,transform .3s ease,box-shadow .3s ease}
+.category-btn:hover{background:var(--wine);color:#fffaf1;border-color:var(--wine);transform:translateY(-2px) scale(1.02);box-shadow:0 8px 18px rgba(166,45,67,.25)}
+@media(max-width:1050px){.catalog-front .category-content{left:14px;right:14px;width:auto}.catalog-front .category:hover .category-content{left:14px;right:14px;width:auto}.catalog-front .category h3,.catalog-front .category p{opacity:1;visibility:visible;transform:none;max-height:100px}.catalog-front .category-btn{margin-top:10px;opacity:1;visibility:visible}}
+@media(max-width:650px){.catalog-front .category:hover .category-content{left:14px;right:14px;bottom:14px;width:auto}.catalog-front .category:hover h3{font-size:18px}}
+.catalog-front .category:hover .category-content{z-index:5;left:14px;right:auto;bottom:14px;width:min(300px,calc(100% - 28px));padding:20px 18px 17px;background:#fff8ef;color:#500f1c;border:1px solid #b8787d;border-radius:2px;box-shadow:none;transform:none}.catalog-front .category:hover .category-content h3{font-family:Georgia,serif;color:#500f1c;font-size:21px;line-height:1.12;margin:0 0 8px;font-weight:400}.catalog-front .category:hover .category-content p{color:#745964;font-family:Arial,sans-serif;font-size:12px;line-height:1.45;margin:0 0 15px;opacity:1}.catalog-front .category-btn{display:block;width:100%;min-height:38px;padding:10px 14px;border:1px solid #b8787d;border-radius:2px;background:#fff8ef;color:#b8787d;font-family:Arial,sans-serif;font-size:10px;font-weight:700;letter-spacing:1.35px;line-height:1.2;text-transform:uppercase;cursor:pointer;transition:background .3s ease,color .3s ease,border-color .3s ease}.catalog-front .category-btn:hover,.catalog-front .category-btn:focus-visible{background:#b8787d;color:#fff8ef;border-color:#b8787d;outline:none;transform:none;box-shadow:none}.catalog-front .category-btn:active{background:#a5676d;color:#fff8ef;border-color:#a5676d}.catalog-front .category-btn:focus-visible{box-shadow:0 0 0 3px rgba(184,120,125,.22)}
+/* Финальные стили кнопки каталога: перекрывают базовые правила .btn и native-стили браузера */
+.catalog-front .category:hover .category-content .category-btn,
+.catalog-front .category-btn {
+  appearance: none;
+  -webkit-appearance: none;
+  display: block;
+  width: 100%;
+  min-height: 38px;
+  padding: 10px 14px;
+  border: 1px solid #800020 !important;
+  border-radius: 2px;
+  background: #800020 !important;
+  color: #fff8ef !important;
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.35px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color .3s ease, color .3s ease, border-color .3s ease, transform .3s ease, box-shadow .3s ease;
+}
+.catalog-front .category:hover .category-content .category-btn:hover,
+.catalog-front .category-btn:hover,
+.catalog-front .category-btn:focus-visible {
+  background: #fff8ef !important;
+  color: #800020 !important;
+  border-color: #800020 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(166,45,67,.3);
+  outline: none;
+}
+.catalog-front .category-btn:active {
+  background: #3b0b15 !important;
+  color: #fff8ef !important;
+  border-color: #3b0b15 !important;
+  transform: translateY(0);
+}
+/* ===== ЗАМЕНЁННЫЙ 3D-КАТАЛОГ: НАПРАВЛЕНИЯ ===== */
+.catalog-section{padding:60px 0;perspective:1800px}
+.catalog-flipper{position:relative;min-height:600px;transform-style:preserve-3d;transition:transform .8s cubic-bezier(.4,0,.2,1)}
+.catalog-flipper.is-flipped{transform:rotateY(180deg)}
+.catalog-flipper>.catalog-front,.catalog-flipper>.catalog-back{position:absolute;inset:0;width:100%;height:100%;backface-visibility:hidden;-webkit-backface-visibility:hidden}
+.catalog-flipper>.catalog-front{transform:rotateY(0);padding:60px 70px;overflow:hidden}
+.catalog-flipper>.catalog-back{transform:rotateY(180deg);display:flex;flex-direction:column;padding:60px 70px;overflow:hidden}
+.catalog-flipper .process-header{max-width:700px;text-align:center;margin:0 auto 30px}
+.catalog-flipper .process-title{font-family:Georgia,serif;font-size:2.5rem;font-weight:400;color:var(--burg);margin-bottom:12px}
+.catalog-flipper .process-divider{width:40px;height:2px;background:var(--burg);margin:0 auto 16px}
+.catalog-flipper .process-subtitle{color:var(--muted);font-size:.9rem}
+.catalog-flipper .accordion{display:flex;gap:12px;width:100%;height:400px}
+.catalog-flipper .accordion-item{position:relative;flex:1;min-width:0;overflow:hidden;border-radius:16px;border:0;cursor:pointer;background:#3b1720;transition:flex .6s cubic-bezier(.25,1,.5,1),transform .45s,box-shadow .45s}
+.catalog-flipper .accordion-item:hover{flex:4;transform:translateY(-4px);box-shadow:0 18px 38px rgba(80,15,28,.2)}
+.catalog-flipper .accordion-bg{position:absolute;inset:0;width:100%;height:100%;transition:transform .8s ease}
+.catalog-flipper .accordion-item:hover .accordion-bg{transform:scale(1.05)}
+.catalog-flipper .accordion-item:nth-child(1) .accordion-bg{background:linear-gradient(150deg,#bd8d62,#613d35 44%,#24131a)}
+.catalog-flipper .accordion-item:nth-child(2) .accordion-bg{background:linear-gradient(150deg,#748058,#dbc28e 45%,#2c4036)}
+.catalog-flipper .accordion-item:nth-child(3) .accordion-bg{background:linear-gradient(150deg,#b98b74,#56484b 45%,#1e1c26)}
+.catalog-flipper .accordion-item:nth-child(4) .accordion-bg{background:linear-gradient(150deg,#a75b6b,#e5c59a 47%,#54212e)}
+.catalog-flipper .accordion-item:nth-child(5) .accordion-bg{background:linear-gradient(150deg,#64747c,#c7a77b 45%,#1e2930)}
+.catalog-flipper .accordion-overlay{position:absolute;inset:0;background:rgba(82,21,28,.85);transition:background .4s ease}
+.catalog-flipper .accordion-item:hover .accordion-overlay{background:rgba(60,15,20,.95)}
+.catalog-flipper .accordion-title-collapsed{position:absolute;bottom:30px;left:50%;transform:translateX(-50%) rotate(-90deg);transform-origin:left bottom;color:#fff;font-size:.95rem;font-weight:700;letter-spacing:2px;white-space:nowrap;transition:opacity .3s ease}
+.catalog-flipper .accordion-item:hover .accordion-title-collapsed{opacity:0}
+.catalog-flipper .accordion-content{position:absolute;left:25px;bottom:25px;opacity:0;transform:translateY(15px);transition:opacity .4s ease .2s,transform .4s ease .2s;pointer-events:none}
+.catalog-flipper .accordion-item:hover .accordion-content{opacity:1;transform:translateY(0);pointer-events:auto}
+.catalog-flipper .accordion-card{width:max-content;min-width:260px;padding:24px 28px;background:#fff8ef;border:1px solid #b8787d;border-radius:2px;box-shadow:none}
+.catalog-flipper .accordion-card h3{font-family:Georgia,serif;font-size:1.4rem;font-weight:400;line-height:1.2;color:var(--burg);margin-bottom:6px}
+.catalog-flipper .accordion-card p{font-size:.85rem;line-height:1.4;color:var(--muted);margin-bottom:20px}
+.catalog-flipper .accordion-card .btn{appearance:none;-webkit-appearance:none;width:100%;padding:12px;border:1px solid #800020!important;border-radius:2px;background:#800020!important;color:#fff8ef!important;font-family:Arial,sans-serif;font-size:.75rem;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;box-shadow:none;transform:none;transition:background-color .3s ease,color .3s ease,border-color .3s ease,transform .3s ease,box-shadow .3s ease}
+.catalog-flipper .accordion-card .btn:hover,.catalog-flipper .accordion-card .btn:focus-visible{background:#fff8ef!important;color:#800020!important;border-color:#800020!important;transform:none;box-shadow:0 7px 16px rgba(128,0,32,.2);outline:none}
+.catalog-flipper .back-header{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:25px;padding-bottom:15px;border-bottom:1px solid var(--line)}
+.catalog-flipper .back-title{font-family:Georgia,serif;font-size:2rem;font-weight:400;color:var(--burg)}
+.catalog-flipper .btn-back{display:flex;align-items:center;gap:6px;padding:8px 18px;border:1px solid var(--burg);border-radius:6px;background:transparent;color:var(--burg);cursor:pointer;font-weight:600;font-size:.85rem;transition:.3s}
+.catalog-flipper .btn-back:hover{background:var(--burg);color:#fff}
+.catalog-flipper .inner-catalog-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;max-height:480px;overflow-y:auto;padding-right:10px}
+.catalog-flipper .inner-item{overflow:hidden;background:var(--cream);border:1px solid var(--line);border-radius:12px;transition:.3s}
+.catalog-flipper .inner-item:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:var(--wine)}
+.catalog-flipper .inner-img{height:180px;width:100%;background:linear-gradient(140deg,#bd8b62,#4d252e);border-bottom:1px solid var(--line)}
+.catalog-flipper .inner-item:nth-child(2) .inner-img{background:linear-gradient(140deg,#79815e,#2d4037)}
+.catalog-flipper .inner-info{padding:15px}
+.catalog-flipper .inner-info h4{font-family:Georgia,serif;font-size:1.1rem;font-weight:400;color:var(--burg);margin-bottom:6px}
+.catalog-flipper .inner-info p{font-size:.8rem;color:var(--muted);min-height:36px;overflow:hidden;margin-bottom:12px}
+.catalog-flipper .inner-info .price{font-size:1.1rem;font-weight:700;color:var(--wine);margin-bottom:12px}
+.catalog-flipper .inner-info .btn{width:100%;padding:10px;font-size:.75rem}
+@media(max-width:1050px){.catalog-flipper{min-height:760px}.catalog-flipper>.catalog-front,.catalog-flipper>.catalog-back{padding:38px}.catalog-flipper .accordion{height:auto;flex-direction:column;gap:14px}.catalog-flipper .accordion-item{height:240px;flex:auto}.catalog-flipper .accordion-title-collapsed{display:none}.catalog-flipper .accordion-content{left:15px;right:15px;bottom:15px;opacity:1;transform:none;pointer-events:auto}.catalog-flipper .accordion-card{width:100%;min-width:0;padding:18px 20px}.catalog-flipper .catalog-back{display:none}.catalog-flipper.is-flipped>.catalog-front{display:none}.catalog-flipper.is-flipped>.catalog-back{display:flex}.catalog-flipper .inner-catalog-grid{grid-template-columns:1fr 1fr;max-height:600px}}
+@media(max-width:650px){.catalog-section{padding:30px 0}.catalog-flipper{min-height:900px;transform-style:flat;transition:none}.catalog-flipper>.catalog-front,.catalog-flipper>.catalog-back{position:relative;height:auto;padding:30px 20px}.catalog-flipper>.catalog-back{display:none;margin-top:0}.catalog-flipper.is-flipped>.catalog-front{display:none}.catalog-flipper.is-flipped>.catalog-back{display:flex}.catalog-flipper .process-title{font-size:2rem}.catalog-flipper .accordion-item{height:220px}.catalog-flipper .inner-catalog-grid{grid-template-columns:1fr;max-height:none}.catalog-flipper .back-header{align-items:flex-start;flex-direction:column}.catalog-flipper .back-title{font-size:1.7rem}}
+</style>
+<style>
+/* Изолированный каталог: размеры рамки и отступы как у остальных секций. */
+#catalog{padding:24px 0;perspective:none;scroll-margin-top:90px}
+#catalog .pr-shell{width:100%;perspective:2000px}
+#catalog .pr-flipper{display:grid;position:relative;width:100%;transform-style:preserve-3d;transition:transform .8s cubic-bezier(.4,0,.2,1)}
+#catalog .pr-flipper.is-flipped{transform:rotateY(180deg)}
+#catalog .pr-face{grid-area:1/1;min-width:0;min-height:clamp(460px,65vh,560px);padding:clamp(34px,4vw,58px);background:var(--paper);border:1px solid var(--line);border-radius:28px;box-shadow:0 12px 45px rgba(80,15,28,.045);backface-visibility:hidden;-webkit-backface-visibility:hidden}
+#catalog .pr-front{transform:rotateY(0deg);display:flex;flex-direction:column}
+#catalog .pr-back{transform:rotateY(180deg);pointer-events:none}
+#catalog .is-flipped .pr-front{pointer-events:none}
+#catalog .is-flipped .pr-back{pointer-events:auto}
+#catalog .pr-heading{text-align:center;margin:0 auto 28px}
+#catalog .pr-heading h2{margin:0 0 12px;font:400 clamp(30px,3vw,42px)/1.2 Georgia,serif;color:#800020}
+#catalog .pr-divider{width:40px;height:2px;margin:0 auto 16px;background:#800020}
+#catalog .pr-heading p{margin:0;font:14px/1.5 Arial,sans-serif;color:var(--muted)}
+#catalog .pr-accordion{display:flex;gap:12px;width:100%;height:clamp(260px,36vh,340px);flex:1;min-height:260px}
+#catalog .pr-direction{position:relative;flex:1;min-width:0;overflow:hidden;border-radius:16px;background:#52151c;outline:none;transition:flex .6s cubic-bezier(.25,1,.5,1)}
+#catalog .pr-direction:hover,#catalog .pr-direction:focus-within{flex:4}
+#catalog .pr-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:linear-gradient(145deg,#bc906c,#54303a);transition:transform .8s ease}
+#catalog .pr-direction:nth-child(2) .pr-photo{background:linear-gradient(145deg,#7f8e62,#d6bd91)}
+#catalog .pr-direction:nth-child(3) .pr-photo{background:linear-gradient(145deg,#c0a090,#5c5262)}
+#catalog .pr-direction:nth-child(4) .pr-photo{background:linear-gradient(145deg,#b47784,#e2c59c)}
+#catalog .pr-direction:nth-child(5) .pr-photo{background:linear-gradient(145deg,#6b808b,#c2a177)}
+#catalog .pr-direction:hover .pr-photo,#catalog .pr-direction:focus-within .pr-photo{transform:scale(1.05)}
+#catalog .pr-overlay{position:absolute;inset:0;background:rgba(82,21,28,.85);transition:background .4s ease}
+#catalog .pr-direction:hover .pr-overlay,#catalog .pr-direction:focus-within .pr-overlay{background:rgba(60,15,20,.95)}
+#catalog .pr-label{position:absolute;bottom:30px;left:50%;transform:translateX(-50%) rotate(180deg);writing-mode:vertical-rl;white-space:nowrap;font:700 14px Arial,sans-serif;letter-spacing:2px;color:#fff;transition:opacity .25s ease}
+#catalog .pr-direction:hover .pr-label,#catalog .pr-direction:focus-within .pr-label{opacity:0}
+#catalog .pr-description{position:absolute;left:20px;right:20px;bottom:20px;max-width:340px;padding:24px 28px;background:#fff8ef;border:1px solid #b8787d;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.2);opacity:0;visibility:hidden;transform:translateY(15px);pointer-events:none;transition:opacity .35s ease,transform .35s ease,visibility .35s ease}
+#catalog .pr-direction:hover .pr-description,#catalog .pr-direction:focus-within .pr-description{opacity:1;visibility:visible;transform:none;pointer-events:auto}
+#catalog .pr-description h3{margin:0 0 8px;font:400 clamp(18px,1.6vw,23px)/1.25 Georgia,serif;color:#3b0a12}
+#catalog .pr-description p{margin:0 0 20px;font:13px/1.5 Arial,sans-serif;color:var(--muted)}
+#catalog .pr-button{appearance:none;-webkit-appearance:none;display:flex;align-items:center;justify-content:center;width:100%;min-height:44px;padding:12px 16px;background:#800020;border:1px solid #800020;border-radius:4px;color:#fff8ef;font:800 12px/1.35 Arial,sans-serif;letter-spacing:1.2px;text-transform:uppercase;cursor:pointer;box-shadow:0 4px 15px rgba(128,0,32,.2);transition:background-color .3s ease,border-color .3s ease,box-shadow .3s ease}
+#catalog .pr-button:hover,#catalog .pr-button:focus-visible{background:#500f1c;border-color:#500f1c;box-shadow:0 6px 18px rgba(80,15,28,.3)}
+#catalog .pr-button:focus-visible,#catalog .pr-return:focus-visible,#catalog .pr-direction:focus-visible{outline:2px solid #b8787d;outline-offset:4px}
+#catalog .pr-back-heading{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:24px;padding-bottom:18px;border-bottom:1px solid var(--line)}
+#catalog .pr-back-heading h2{margin:0;font:400 clamp(25px,2.5vw,36px)/1.2 Georgia,serif;color:#800020}
+#catalog .pr-return{flex-shrink:0;padding:10px 18px;background:transparent;border:1px solid #800020;border-radius:6px;color:#800020;font:600 13px Arial,sans-serif;cursor:pointer;transition:background-color .3s ease,color .3s ease}
+#catalog .pr-return:hover{background:#800020;color:#fff8ef}
+#catalog .pr-products{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+#catalog .pr-product{overflow:hidden;background:#fffdf9;border:1px solid var(--line);border-radius:12px}
+#catalog .pr-product-visual{display:block;width:100%;height:clamp(120px,19vh,170px);background:#f4e6cd}
+#catalog .pr-product-info{padding:16px}
+#catalog .pr-product-info h3{margin:0 0 8px;font:400 20px/1.25 Georgia,serif;color:#3b0a12}
+#catalog .pr-product-info p{margin:0 0 12px;font:13px/1.5 Arial,sans-serif;color:var(--muted)}
+#catalog .pr-price{margin-bottom:14px;font-size:14px;font-weight:700;color:#800020}
+@media(max-width:1050px){
+#catalog .pr-flipper,#catalog .pr-flipper.is-flipped{display:block;transform:none;transform-style:flat;transition:none}
+#catalog .pr-face{min-height:0;transform:none;padding:38px}
+#catalog .pr-back{display:none}
+#catalog .is-flipped .pr-front{display:none}
+#catalog .is-flipped .pr-back{display:block}
+#catalog .pr-accordion{flex-direction:column;height:auto}
+#catalog .pr-direction,#catalog .pr-direction:hover,#catalog .pr-direction:focus-within{flex:none;height:240px}
+#catalog .pr-label{display:none}
+#catalog .pr-description{opacity:1;visibility:visible;transform:none;pointer-events:auto}
+}
+@media(max-width:650px){
+#catalog .pr-face{padding:30px 20px;border-radius:28px}
+#catalog .pr-products{grid-template-columns:1fr}
+#catalog .pr-back-heading{align-items:flex-start;flex-direction:column}
+#catalog .pr-description{left:15px;right:15px;bottom:15px;max-width:none;padding:20px}
+}
+@media(prefers-reduced-motion:reduce){#catalog .pr-flipper,#catalog .pr-photo,#catalog .pr-description,#catalog .pr-direction,#catalog .pr-button{transition:none}}
+/* Общий размер четырёх глав по области, отмеченной на референсе.
+   Красная линия — только ориентир размера, не декоративная рамка. */
+:root{--chapter-gutter:clamp(24px,5.95vw,114px);--chapter-height:calc(100svh - 170px)}
+.container,.hero .container,section>.container,footer>.container{width:calc(100% - var(--chapter-gutter) - var(--chapter-gutter));max-width:none;margin-left:auto;margin-right:auto}
+#home,#process,#catalog,#about{min-height:calc(100svh - 78px);padding:46px 0;scroll-margin-top:78px;display:flex;align-items:center}
+#home{padding-top:124px;min-height:100svh}
+#home .hero-card,#process .process-card,#about .about-card,#catalog .pr-face{width:100%;min-height:var(--chapter-height);padding:clamp(32px,3vw,58px);border-radius:28px;display:flex;flex-direction:column;justify-content:center}
+#home .hero-grid,#about .about-grid{width:100%;flex:1;align-items:center}
+#home .hero-art{min-height:clamp(410px,57svh,640px)}
+#home .art-frame{height:clamp(390px,53svh,600px)}
+#process .process-grid{flex:1;align-items:stretch}
+#process .step{padding:clamp(20px,2vw,34px) 18px;display:flex;flex-direction:column;justify-content:center}
+#process .section-head{margin-bottom:32px}
+#process .center-cta{margin-top:32px}
+#catalog .pr-flipper{width:100%}
+#catalog .pr-face{justify-content:flex-start}
+#catalog .pr-heading{margin-bottom:32px}
+#catalog .pr-accordion{height:auto;flex:1;min-height:300px}
+#catalog .pr-products{flex:1;align-items:stretch}
+#catalog .pr-product{display:flex;flex-direction:column}
+#catalog .pr-product-visual{height:auto;min-height:170px;flex:1}
+#catalog .pr-product-info{padding:20px}
+#about .about-art{min-height:clamp(360px,55svh,620px)}
+@media(max-width:1050px){
+:root{--chapter-gutter:clamp(20px,4vw,42px)}
+#home,#process,#catalog,#about{min-height:0;padding:28px 0}
+#home{padding-top:106px}
+#home .hero-card,#process .process-card,#about .about-card,#catalog .pr-face{min-height:0;padding:38px}
+#home .hero-art{min-height:440px}#home .art-frame{height:420px}
+#catalog .pr-accordion{min-height:0;flex:none}
+#catalog .pr-product-visual{height:190px;flex:none}
+#about .about-art{min-height:360px}
+}
+@media(max-width:650px){
+:root{--chapter-gutter:12px}
+#home,#process,#catalog,#about{scroll-margin-top:67px;padding:18px 0}
+#home{padding-top:94px}
+#home .hero-card,#process .process-card,#about .about-card,#catalog .pr-face{padding:28px 20px;border-radius:20px}
+#home .hero-art{min-height:360px}#home .art-frame{height:340px}
+#catalog .pr-product-visual{height:170px}
+}
+/* Состояние пустого каталога (Empty State) */
+.pr-empty-catalog{grid-column:1/-1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:48px 24px;background:#fffdf9;border:1px dashed #cfb297;border-radius:18px;margin:10px 0}
+.pr-empty-icon{width:68px;height:68px;margin-bottom:18px;color:#800020;display:flex;align-items:center;justify-content:center;background:#fcf4ec;border-radius:50%;padding:14px;box-sizing:border-box}
+.pr-empty-icon svg{width:100%;height:100%;display:block}
+.pr-empty-title{margin:0 0 10px;font:400 clamp(20px,2vw,24px)/1.25 Georgia,serif;color:#3b0a12}
+.pr-empty-desc{margin:0 0 22px;max-width:440px;font:14px/1.55 Arial,sans-serif;color:var(--muted)}
+.pr-empty-btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 24px;background:#800020;color:#fff8ef;border:1px solid #800020;border-radius:6px;font:700 13px Arial,sans-serif;letter-spacing:0.5px;cursor:pointer;text-decoration:none;transition:background-color .25s ease,box-shadow .25s ease}
+.pr-empty-btn:hover{background:#500f1c;border-color:#500f1c;box-shadow:0 4px 14px rgba(80,15,28,0.25)}
+
+/* Стили панели администратора */
+.admin-bar{position:fixed;bottom:20px;right:20px;z-index:9999;background:#24060b;color:#fff8ef;padding:12px 18px;border-radius:14px;box-shadow:0 10px 30px rgba(0,0,0,0.35);display:flex;align-items:center;gap:12px;border:1px solid #731e2b;font-family:Arial,sans-serif;font-size:13px}
+.admin-badge{font-weight:700;color:#e6cdb0;padding-right:6px;border-right:1px solid rgba(255,255,255,0.15)}
+.admin-btn-action,.admin-btn-primary{background:#800020;border:1px solid #a82438;color:#fff;padding:8px 14px;border-radius:6px;cursor:pointer;font-weight:600;font-size:12px;transition:background .2s}
+.admin-btn-action:hover,.admin-btn-primary:hover{background:#a82438}
+.admin-btn-secondary{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:#fff8ef;padding:8px 12px;border-radius:6px;cursor:pointer;font-size:12px}
+.admin-modal{position:fixed;inset:0;background:rgba(0,0,0,0.65);z-index:10000;display:flex;align-items:center;justify-content:center;padding:16px}
+.admin-modal-box{background:#fff8ef;border:1px solid #d4bda4;border-radius:18px;max-width:440px;width:100%;padding:26px;box-shadow:0 20px 50px rgba(0,0,0,0.3);color:#3b0a12;font-family:Arial,sans-serif}
+.admin-modal-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}
+.admin-modal-head h3{margin:0;font-family:Georgia,serif;font-size:20px;color:#800020}
+.admin-close-btn{background:none;border:none;font-size:24px;cursor:pointer;color:#800020;line-height:1}
+.admin-field{margin-bottom:16px}
+.admin-field label{display:block;margin-bottom:6px;font-size:13px;font-weight:600}
+.admin-field input[type="text"],.admin-field input[type="password"],.admin-field textarea{width:100%;padding:10px 12px;border:1px solid #c9b09a;border-radius:6px;font-size:14px;background:#fff;box-sizing:border-box}
+.admin-preview{margin-top:10px;max-height:140px;overflow:hidden;border-radius:8px;display:none}
+.admin-preview img{width:100%;height:140px;object-fit:cover;display:block}
+.admin-modal-actions{display:flex;gap:10px;justify-content:flex-end;margin-top:20px}
+.pr-product{position:relative}
+.pr-product-img-wrap{position:relative;width:100%;height:clamp(120px,19vh,170px);overflow:hidden;background:#f4e6cd;cursor:zoom-in}
+.pr-product-img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .45s cubic-bezier(0.25, 1, 0.5, 1)}
+.pr-product-img-wrap:hover .pr-product-img{transform:scale(1.1)}
+.pr-zoom-badge{position:absolute;bottom:8px;right:8px;background:rgba(36,6,11,0.75);color:#fff8ef;padding:4px 8px;border-radius:6px;font-size:11px;font-weight:600;display:flex;align-items:center;gap:4px;opacity:0;transform:translateY(4px);transition:opacity .3s ease,transform .3s ease;pointer-events:none}
+.pr-product-img-wrap:hover .pr-zoom-badge{opacity:1;transform:translateY(0)}
+.lightbox{position:fixed;inset:0;background:rgba(20,4,7,0.92);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);z-index:10001;display:none;align-items:center;justify-content:center;padding:24px;opacity:0;transition:opacity .3s ease;cursor:zoom-out}
+.lightbox.is-open{display:flex;opacity:1}
+.lightbox-content{position:relative;max-width:92vw;max-height:90vh;display:flex;flex-direction:column;align-items:center;cursor:default}
+.lightbox-img{max-width:100%;max-height:80vh;object-fit:contain;border-radius:12px;box-shadow:0 20px 60px rgba(0,0,0,0.6);border:1px solid rgba(255,255,255,0.15)}
+.lightbox-caption{margin-top:14px;color:#fff8ef;font-family:Georgia,serif;font-size:1.2rem;text-align:center;letter-spacing:0.5px}
+.lightbox-close{position:absolute;top:20px;right:24px;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.25);color:#fff8ef;width:44px;height:44px;border-radius:50%;font-size:24px;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background .2s,transform .2s}
+.lightbox-close:hover{background:#800020;transform:scale(1.08)}
+.pr-card-controls{position:absolute;top:10px;right:10px;display:flex;gap:6px;z-index:10}
+.pr-ctrl-btn{background:rgba(36,6,11,0.85);color:#fff;border:1px solid rgba(255,255,255,0.3);border-radius:6px;padding:5px 9px;font-size:11px;cursor:pointer;backdrop-filter:blur(4px);transition:background .2s}
+.pr-ctrl-btn:hover{background:#800020}
+.pr-ctrl-del:hover{background:#b3261e}
+
+/* Кнопка редактирования категорий на главной */
+.pr-direction-edit-btn{position:absolute;top:12px;right:12px;z-index:15;background:rgba(36,6,11,0.88);color:#fff8ef;border:1px solid rgba(255,255,255,0.35);border-radius:6px;padding:6px 10px;font-size:11px;font-weight:700;letter-spacing:0.5px;cursor:pointer;backdrop-filter:blur(6px);transition:background .2s,transform .2s;display:none}
+.pr-direction-edit-btn:hover{background:#800020;transform:scale(1.05)}
+.is-admin-mode .pr-direction-edit-btn{display:flex;align-items:center;gap:4px}
+
+/* Шапка: увеличенные пункты в пределах красных отметок на референсе. */
+.nav .logo{white-space:nowrap;flex-shrink:0}
+.nav .nav-links{flex:1;max-width:880px;margin-inline:auto;justify-content:center;align-items:center;gap:clamp(24px,3vw,58px);font-size:clamp(15px,1.05vw,20px);line-height:1.3}
+.nav .nav-links a{white-space:nowrap;padding:12px 0}
+.nav .nav-actions{flex-shrink:0;gap:10px}
+.nav .messenger-icon{appearance:none;width:40px;height:40px;flex-shrink:0;display:grid;place-items:center;border:1px solid var(--wine);border-radius:50%;background:var(--wine);color:#fff8ef;padding:9px;cursor:pointer;transition:background-color .25s ease,border-color .25s ease,box-shadow .25s ease}
+.nav .messenger-icon svg{width:22px;height:22px;display:block}
+.nav .messenger-icon:hover{background:var(--burg);border-color:var(--burg);box-shadow:0 4px 12px rgba(80,15,28,.18)}
+.nav .messenger-icon:focus-visible{outline:2px solid var(--wine);outline-offset:4px}
+.nav .max-contact{cursor:pointer}.nav .max-contact svg{width:22px;height:22px;display:block}
+@media(min-width:1051px) and (max-width:1250px){.nav{gap:16px}.nav .nav-links{gap:20px;font-size:14px}.nav .nav-actions{gap:7px}.nav .phone{padding:10px 12px}}
+@media(max-width:650px){.nav{gap:10px}.nav .nav-actions{gap:7px}.nav .messenger-icon{width:36px;height:36px;padding:8px}.nav .messenger-icon svg{width:20px;height:20px}}
+</style>
+</head>
+<body>
+<div class="copy-toast" id="toast">Номер скопирован</div>
+<div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Просмотр фотографии">
+  <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Закрыть">✕</button>
+  <div class="lightbox-content" id="lightboxContent">
+    <img class="lightbox-img" id="lightboxImg" src="" alt="Фотография во весь экран">
+    <div class="lightbox-caption" id="lightboxCaption"></div>
+  </div>
+</div>
+<header><div class="container nav"><a class="logo" href="#home">Paul Ritter</a><nav class="nav-links"><a href="#process">Как работаем</a><a href="#catalog">Работы</a><a href="#about">О мастерской</a><a href="#order">Обсудить идею</a></nav><div class="nav-actions"><a class="tg messenger-icon" href="https://t.me/Paul_Ritter" target="_blank" rel="noopener noreferrer" aria-label="Написать в Telegram" title="Написать в Telegram"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21.4 4.6 18.2 20c-.24 1.1-.88 1.37-1.78.85l-4.9-3.61-2.36 2.28c-.26.26-.48.48-.98.48l.35-4.99 9.08-8.2c.4-.35-.09-.55-.61-.2L5.77 13.68.93 12.17c-1.05-.33-1.07-1.05.22-1.55L20.08 3.3c.88-.32 1.65.21 1.32 1.3Z"/></svg></a><a class="messenger-icon max-contact" href="https://max.ru/u/f9LHodD0cOJd4x2Mf9qGFVoxIQA_CLtfkQeMS8ATccqau1fTfxTuKUZTxLI" target="_blank" rel="noopener noreferrer" aria-label="Написать в MAX" title="Написать в MAX"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" fill-rule="evenodd" d="M12 2.15c-5.47 0-9.85 4.12-9.85 9.28 0 2.3.88 4.42 2.38 6.03l-.92 3.12c-.2.68.5 1.28 1.15.94l3.35-1.73c1.2.47 2.52.73 3.89.73 5.47 0 9.85-4.12 9.85-9.28S17.47 2.15 12 2.15Zm0 3.45a5.83 5.83 0 1 0 0 11.66 5.83 5.83 0 0 0 0-11.66Z" clip-rule="evenodd"/></svg></a><button class="phone" id="phoneBtn">Позвонить</button></div></div></header>
+<main>
+<section class="hero" id="home"><div class="container"><div class="site-card hero-card"><div class="hero-grid"><div><div class="eyebrow">Мастерская металла · Краснодар</div><h1>Мебель, которую не купить в магазине</h1><p class="lead">Вы знаете, что хотите. Мы воплотим это — вещь из металла по вашей идее.</p><div class="hero-buttons"><a class="btn" href="#catalog">Посмотреть работы <span>↗</span></a><a class="btn alt" href="#order">Рассчитать мою идею</a></div><div class="stats"><div class="stat"><strong>от 3 дней</strong><span>от эскиза до готовой вещи</span></div><div class="stat"><strong>3 года</strong><span>гарантии на изделие</span></div><div class="stat"><strong>100%</strong><span>по вашим размерам</span></div></div></div><div class="hero-art" id="heroArtBlock">
+  <button id="heroArtEditBtn" class="hero-art-edit-btn" type="button" title="Редактировать изображение и текст на главной">✏ Ред. главный баннер</button>
+  <div class="art-frame" id="heroArtFrame">
+    <div id="heroArtDefaultGraphics" style="position:relative;width:100%;height:100%;">
+      <div class="art-window"></div>
+      <div class="art-table"><i class="art-leg"></i><i class="art-leg two"></i></div>
+      <div class="art-chair"></div>
+      <div class="art-plant"></div>
+      <div class="art-label">METAL · WOOD · CHARACTER</div>
+    </div>
+    <div id="heroArtCustomWrap" class="hero-art-img-wrap">
+      <img id="heroArtCustomImg" class="hero-art-img" src="" alt="Paul Ritter мебель">
+    </div>
+  </div>
+  <div class="floating-note">
+    <b id="slideText">Стол, который собирает вокруг себя всех</b>
+    <span id="slideSubtext">одна идея · одна вещь · ваш интерьер</span>
+  </div>
+</div></div></div></div></section>
+<section id="process"><div class="container"><div class="site-card process-card"><div class="section-head"><div class="eyebrow">Простой путь к своей вещи</div><h2>Ваш замысел - Наше исполнение</h2><p>Референс из Pinterest, набросок на бумаге или словесное описание - Остальное наша работа.</p></div><div class="process-grid"><div class="step"><div class="step-num">01</div><div class="step-icon">01</div><h3>Покажите, что нравится</h3><p>Фото, идея, эскиз или просто несколько слов о желаемом результате.</p></div><div class="step"><div class="step-num">02</div><div class="step-icon">02</div><h3>Соберём решение</h3><p>Определим размеры, материалы, конструкцию, сроки и стоимость.</p></div><div class="step"><div class="step-num">03</div><div class="step-icon">03</div><h3>Зафиксируем детали</h3><p>Согласуем форму, оттенок покрытия и все важные нюансы.</p></div><div class="step"><div class="step-num">04</div><div class="step-icon">04</div><h3>Создадим в мастерской</h3><p>Точная резка, аккуратная сварка и тщательная обработка каждого шва.</p></div><div class="step"><div class="step-num">05</div><div class="step-icon">05</div><h3>Упакуем и передадим</h3><p>Надёжно подготовим изделие к доставке или самовывозу.</p></div></div><div class="center-cta"><a class="btn alt" href="#order">Рассчитать стоимость проекта →</a></div></div></div></section>
+<section class="catalog-section" id="catalog" aria-label="Направления">
+<div class="container"><div class="pr-shell"><div class="pr-flipper" id="catalogFlipper">
+<div class="pr-face pr-front">
+<div class="pr-heading"><h2>Направления</h2><div class="pr-divider"></div><p>Выберите интересующую вас категорию</p></div>
+<div class="pr-accordion">
+<article class="pr-direction" data-cat="interior" tabindex="0"><button class="pr-direction-edit-btn" type="button" title="Редактировать категорию">✏ Ред.</button><div class="pr-photo-wrap"><svg class="pr-photo" viewBox="0 0 320 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><g fill="none" stroke="#eed7b0" stroke-width="9"><path d="M40 175H280V195H40Z M65 195V330 M255 195V330"/></g></svg></div><div class="pr-overlay"></div><div class="pr-label">ИНТЕРЬЕР</div><div class="pr-description"><h3>Мебель для интерьера</h3><p>Лофт, индастриал, кастом.</p><button class="pr-button" type="button" data-open="interior">Смотреть каталог</button></div></article>
+<article class="pr-direction" data-cat="street" tabindex="0"><button class="pr-direction-edit-btn" type="button" title="Редактировать категорию">✏ Ред.</button><div class="pr-photo-wrap"><svg class="pr-photo" viewBox="0 0 320 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><g fill="none" stroke="#eed7b0" stroke-width="9"><path d="M55 160H265V225H55Z M40 245H280 M65 245V325 M255 245V325"/></g></svg></div><div class="pr-overlay"></div><div class="pr-label">УЛИЦА</div><div class="pr-description"><h3>Садовая мебель</h3><p>Для дачи, двора и террас.</p><button class="pr-button" type="button" data-open="street">Смотреть каталог</button></div></article>
+<article class="pr-direction" data-cat="business" tabindex="0"><button class="pr-direction-edit-btn" type="button" title="Редактировать категорию">✏ Ред.</button><div class="pr-photo-wrap"><svg class="pr-photo" viewBox="0 0 320 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><g fill="none" stroke="#eed7b0" stroke-width="9"><path d="M80 75H240V335H80Z M80 155H240 M80 245H240"/></g></svg></div><div class="pr-overlay"></div><div class="pr-label">БИЗНЕС</div><div class="pr-description"><h3>Торговое и офисное</h3><p>Надёжные решения для бизнеса.</p><button class="pr-button" type="button" data-open="business">Смотреть каталог</button></div></article>
+<article class="pr-direction" data-cat="decor" tabindex="0"><button class="pr-direction-edit-btn" type="button" title="Редактировать категорию">✏ Ред.</button><div class="pr-photo-wrap"><svg class="pr-photo" viewBox="0 0 320 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><g fill="none" stroke="#eed7b0" stroke-width="8"><path d="M55 80H265V330H55Z M125 80V330 M195 80V330"/></g></svg></div><div class="pr-overlay"></div><div class="pr-label">ДЕКОР</div><div class="pr-description"><h3>Декор и интерьер</h3><p>Детали, задающие стиль.</p><button class="pr-button" type="button" data-open="decor">Смотреть каталог</button></div></article>
+<article class="pr-direction" data-cat="construct" tabindex="0"><button class="pr-direction-edit-btn" type="button" title="Редактировать категорию">✏ Ред.</button><div class="pr-photo-wrap"><svg class="pr-photo" viewBox="0 0 320 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><g fill="none" stroke="#eed7b0" stroke-width="9"><path d="M40 145L160 90L280 145 M40 145H280 M60 145V330 M260 145V330 M160 90V145"/></g></svg></div><div class="pr-overlay"></div><div class="pr-label">КАРКАСЫ</div><div class="pr-description"><h3>Металлоконструкции</h3><p>Крупногабаритные изделия.</p><button class="pr-button" type="button" data-open="construct">Смотреть каталог</button></div></article>
+</div></div>
+<div class="pr-face pr-back" aria-hidden="true" inert><div class="pr-back-heading"><h2 class="pr-category-title" tabindex="-1">Название категории</h2><button class="pr-return" type="button">⟵ больше интересного</button></div><div class="pr-products"></div></div>
+</div></div></div></section>
+<section class="about" id="about"><div class="container"><div class="site-card about-card"><div class="about-grid"><div class="about-copy"><div class="eyebrow">Мастерская Paul Ritter</div><h2>Когда металл становится частью истории дома</h2><p>Мы не собираем изделия из каталога. Мы слушаем идею, ищем правильную форму и превращаем её в вещь, которой хочется пользоваться каждый день.</p><p>Работаем в Краснодаре: от первого сообщения до аккуратно упакованного изделия — всё под контролем одной команды.</p><div class="promise-list"><div class="promise">Точная геометрия<span>Размеры, которые действительно совпадают с вашими.</span></div><div class="promise">Материалы с характером<span>Металл, дерево и покрытие, выбранные под задачу.</span></div><div class="promise">Без случайных деталей<span>Каждый шов, угол и оттенок согласуем заранее.</span></div><div class="promise">Гарантия 3 года<span>Отвечаем за результат и качество изготовления.</span></div></div></div><div class="about-art"><div class="quote">«Хорошая вещь меняет не комнату — меняет ощущение от неё»</div></div></div></div></div></section>
+<section class="order" id="order"><div class="container"><div class="order-grid"><div><div class="eyebrow" style="color:#e7b7a3">Начнём с вашей идеи</div><h2>Покажите, что хочется сделать</h2><p>Пришлите фото, чертёж или опишите задумку словами. Мы быстро ответим в Telegram, зададим нужные вопросы и назовём ориентировочную стоимость.</p><p><strong>Важно:</strong> работаем по вашим размерам. Замер и монтаж не выполняем.</p><a class="btn alt" style="color:#fff8eb;border-color:#e6cdb0;margin-top:13px" href="https://t.me/Paul_Ritter" target="_blank">Написать напрямую в Telegram ↗</a></div><div class="form-box"><h3>Рассчитать мою идею</h3><form id="orderForm"><div class="field"><label for="userName">Как к вам обращаться?</label><input id="userName" type="text" required placeholder="Ваше имя"></div><div class="field"><label for="userPhone">Телефон</label><input id="userPhone" type="tel" required placeholder="+7 (___) ___-__-__"></div><div class="field"><label for="userMsg">Что изготовить?</label><textarea id="userMsg" rows="4" required placeholder="Например: стол из металла и дуба, 1800 × 800 мм"></textarea></div><button class="btn" type="submit">Перейти в Telegram →</button><div class="form-note">Форма откроет Telegram с уже заполненным сообщением</div></form></div></div></div></section>
+</main>
+<footer><div class="container"><div class="footer-grid"><div><div class="footer-logo">Paul Ritter</div><p>Мебель и конструкции из металла и дерева на заказ. Краснодар.</p></div><div><h4>Связаться</h4><p>г. Краснодар</p><a href="tel:+79200950520">8 (920) 095-05-20</a><a href="https://t.me/Paul_Ritter" target="_blank">Telegram ↗</a></div><div><h4>Навигация</h4><a href="#home">Главная</a><a href="#catalog">Работы</a><a href="#about">О мастерской</a><a href="#order">Обсудить идею</a></div></div><div class="copyright">© 2026 Paul Ritter · Сделано с вниманием к деталям <button id="adminLoginTrigger" style="background:none;border:none;color:inherit;opacity:0.3;cursor:pointer;font-size:11px;margin-left:8px;" title="Вход для владельца">⚙</button></div></div></footer>
+
+<!-- Admin Modal & Floating Bar -->
+<div id="adminBar" class="admin-bar" style="display:none;">
+  <span class="admin-badge">Режим редактора</span>
+  <button id="adminAddBtn" class="admin-btn-action">+ Добавить товар</button>
+  <button id="adminExportBtn" class="admin-btn-action">💾 Экспорт данных</button>
+  <button id="adminLogoutBtn" class="admin-btn-secondary">Выйти</button>
+</div>
+
+<div id="adminModal" class="admin-modal" style="display:none;">
+  <div class="admin-modal-box">
+    <div class="admin-modal-head">
+      <h3 id="adminModalTitle">Вход в панель управления</h3>
+      <button id="adminModalClose" type="button" class="admin-close-btn">×</button>
+    </div>
+    <div id="adminLoginPane">
+      <div class="admin-field">
+        <label for="adminPass">Пароль доступа</label>
+        <input type="password" id="adminPass" placeholder="Введите пароль">
+      </div>
+      <button type="button" id="adminLoginSubmit" class="admin-btn-primary">Войти</button>
+    </div>
+    <div id="adminItemPane" style="display:none;">
+      <input type="hidden" id="editItemCat">
+      <input type="hidden" id="editItemIndex">
+      <div class="admin-field">
+        <label for="editItemName">Название изделия</label>
+        <input type="text" id="editItemName" placeholder="Например: Стол из дуба и профиля">
+      </div>
+      <div class="admin-field">
+        <label for="editItemText">Описание</label>
+        <textarea id="editItemText" rows="3" placeholder="Краткое описание характеристик"></textarea>
+      </div>
+      <div class="admin-field">
+        <label>Фотография изделия</label>
+        <div class="admin-file-wrap">
+          <input type="file" id="editItemPhotoInput" accept="image/*">
+          <div id="photoPreview" class="admin-preview"></div>
+        </div>
+      </div>
+      <div class="admin-modal-actions">
+        <button type="button" id="adminItemSave" class="admin-btn-primary">Сохранить</button>
+        <button type="button" id="adminItemCancel" class="admin-btn-secondary">Отмена</button>
+      </div>
+    </div>
+    <div id="adminHeroPane" style="display:none;">
+      <div class="admin-field">
+        <label>Главное изображение (рамка справа)</label>
+        <div class="admin-file-wrap">
+          <input type="file" id="editHeroPhotoInput" accept="image/*">
+          <div id="heroPhotoPreview" class="admin-preview"></div>
+          <button type="button" id="removeHeroPhotoBtn" style="margin-top:8px;background:none;border:none;color:#b3261e;cursor:pointer;font-size:12px;display:none;">Вернуть стандартную графику</button>
+        </div>
+      </div>
+      <div class="admin-field">
+        <label for="editHeroSlideText">Текст во всплывающей карточке (заголовок)</label>
+        <input type="text" id="editHeroSlideText" placeholder="Кровать, которая переживёт три ремонта">
+        <span style="font-size:11px;color:var(--muted);display:block;margin-top:4px;">Можно перечислить несколько фраз через точку с запятой (;) для автосмены</span>
+      </div>
+      <div class="admin-field">
+        <label for="editHeroSlideSub">Подпись во всплывающей карточке</label>
+        <input type="text" id="editHeroSlideSub" placeholder="одна идея · одна вещь · ваш интерьер">
+      </div>
+      <div class="admin-modal-actions">
+        <button type="button" id="adminHeroSave" class="admin-btn-primary">Сохранить</button>
+        <button type="button" id="adminHeroCancel" class="admin-btn-secondary">Отмена</button>
+      </div>
+    </div>
+    <div id="adminCategoryPane" style="display:none;">
+      <input type="hidden" id="editCatKey">
+      <div class="admin-field">
+        <label for="editCatLabel">Подпись на узкой плашке (КАПС)</label>
+        <input type="text" id="editCatLabel" placeholder="ИНТЕРЬЕР">
+      </div>
+      <div class="admin-field">
+        <label for="editCatTitle">Заголовок категории</label>
+        <input type="text" id="editCatTitle" placeholder="Мебель для интерьера">
+      </div>
+      <div class="admin-field">
+        <label for="editCatDesc">Краткое описание</label>
+        <textarea id="editCatDesc" rows="2" placeholder="Лофт, индастриал, кастом."></textarea>
+      </div>
+      <div class="admin-field">
+        <label>Фоновое фото категории на главной</label>
+        <div class="admin-file-wrap">
+          <input type="file" id="editCatPhotoInput" accept="image/*">
+          <div id="catPhotoPreview" class="admin-preview"></div>
+          <button type="button" id="removeCatPhotoBtn" style="margin-top:8px;background:none;border:none;color:#b3261e;cursor:pointer;font-size:12px;display:none;">Вернуть стандартную векторную схему</button>
+        </div>
+      </div>
+      <div class="admin-modal-actions">
+        <button type="button" id="adminCatSave" class="admin-btn-primary">Сохранить</button>
+        <button type="button" id="adminCatCancel" class="admin-btn-secondary">Отмена</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+(() => {
+const root=document.getElementById('catalog');
+const flipper=root.querySelector('.pr-flipper'),front=root.querySelector('.pr-front'),back=root.querySelector('.pr-back'),title=root.querySelector('.pr-category-title'),grid=root.querySelector('.pr-products'),returnButton=root.querySelector('.pr-return');
+let lastButton=null;
+let currentCatKey='interior';
+let isAdmin=sessionStorage.getItem('pr_admin')==='1';
+
+const defaultCatalog={
+interior:{label:'ИНТЕРЬЕР',title:'Мебель для интерьера',desc:'Лофт, индастриал, кастом.',image:null,items:[{name:'Стол в стиле лофт',text:'Металлическое подстолье под выбранную столешницу.',shape:'table'},{name:'Каркас кровати',text:'Изготовление по вашим размерам и эскизу.',shape:'bed'}]},
+street:{label:'УЛИЦА',title:'Садовая мебель',desc:'Для дачи, двора и террас.',image:null,items:[{name:'Садовая скамья',text:'Металлический каркас для двора или террасы.',shape:'bench'},{name:'Стол для террасы',text:'Размеры и покрытие согласуем под вашу задачу.',shape:'table'}]},
+business:{label:'БИЗНЕС',title:'Торговое и офисное',desc:'Надёжные решения для бизнеса.',image:null,items:[{name:'Торговый стеллаж',text:'Полки и габариты под ваше пространство.',shape:'shelf'},{name:'Каркас рабочей стойки',text:'Основа для стойки в магазине, кафе или офисе.',shape:'table'}]},
+decor:{label:'ДЕКОР',title:'Декор и интерьер',desc:'Детали, задающие стиль.',image:null,items:[{name:'Декоративная перегородка',text:'Геометрия и размеры по согласованному эскизу.',shape:'screen'},{name:'Подставка для растений',text:'Металлическая конструкция для вашего интерьера.',shape:'shelf'}]},
+construct:{label:'КАРКАСЫ',title:'Металлоконструкции',desc:'Крупногабаритные изделия.',image:null,items:[{name:'Каркас навеса',text:'Производство по согласованному чертежу.',shape:'canopy'},{name:'Каркас ворот',text:'Конструкция по вашим размерам.',shape:'screen'}]}
+};
+
+let savedCatalog = null;
+try {
+  const local = localStorage.getItem('pr_catalog_data');
+  if(local) savedCatalog = JSON.parse(local);
+} catch(e){}
+const catalog = savedCatalog || defaultCatalog;
+
+// Гарантируем наличие полей label, desc, image
+for(const k in defaultCatalog){
+  if(catalog[k]){
+    if(!catalog[k].label) catalog[k].label = defaultCatalog[k].label;
+    if(!catalog[k].desc) catalog[k].desc = defaultCatalog[k].desc;
+    if(catalog[k].image === undefined) catalog[k].image = null;
+  }
+}
+
+function saveCatalog(){
+  try {
+    localStorage.setItem('pr_catalog_data', JSON.stringify(catalog));
+  } catch(e){
+    alert('Не удалось сохранить в память браузера (возможно, файл слишком большой).');
+  }
+}
+
+function renderDirectionsFront(){
+  document.querySelectorAll('.pr-direction[data-cat]').forEach(el=>{
+    const k = el.dataset.cat;
+    const data = catalog[k];
+    if(!data) return;
+    const labelEl = el.querySelector('.pr-label');
+    const titleEl = el.querySelector('.pr-description h3');
+    const descEl = el.querySelector('.pr-description p');
+    const photoWrap = el.querySelector('.pr-photo-wrap');
+    if(labelEl) labelEl.textContent = data.label || k.toUpperCase();
+    if(titleEl) titleEl.textContent = data.title;
+    if(descEl) descEl.textContent = data.desc;
+    if(photoWrap){
+      if(data.image){
+        photoWrap.innerHTML = `<img class="pr-photo" src="${data.image}" alt="${data.title}">`;
+      } else {
+        // Восстановление векторного рисунка по умолчанию
+        const defaultSvgs = {
+          interior: '<path d="M40 175H280V195H40Z M65 195V330 M255 195V330"/>',
+          street: '<path d="M55 160H265V225H55Z M40 245H280 M65 245V325 M255 245V325"/>',
+          business: '<path d="M80 75H240V335H80Z M80 155H240 M80 245H240"/>',
+          decor: '<path d="M55 80H265V330H55Z M125 80V330 M195 80V330"/>',
+          construct: '<path d="M40 145L160 90L280 145 M40 145H280 M60 145V330 M260 145V330 M160 90V145"/>'
+        };
+        photoWrap.innerHTML = `<svg class="pr-photo" viewBox="0 0 320 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><g fill="none" stroke="#eed7b0" stroke-width="8">${defaultSvgs[k]||defaultSvgs.interior}</g></svg>`;
+      }
+    }
+  });
+}
+
+const drawings={table:'<path d="M65 75H255V90H65Z M85 90V150 M235 90V150"/>',bed:'<path d="M55 110L125 65H260V105L190 150H55Z M55 110H190L260 65 M55 80V150 M190 115V165 M260 65V125"/>',bench:'<path d="M70 65H250V105H70Z M60 110H260 M85 110V155 M235 110V155"/>',shelf:'<path d="M100 35H220V160H100Z M100 75H220 M100 115H220"/>',screen:'<path d="M70 40H250V160H70Z M115 40V160 M160 40V160 M205 40V160"/>',canopy:'<path d="M55 65L160 30L265 65 M55 65H265 M75 65V160 M245 65V160 M160 30V65"/>'};
+
+function renderProducts(){
+  const category=catalog[currentCatKey];
+  if(!category) return;
+  title.textContent=category.title;
+  
+  if(!category.items || category.items.length === 0){
+    const emptyBox = document.createElement('div');
+    emptyBox.className = 'pr-empty-catalog';
+    emptyBox.innerHTML = `
+      <div class="pr-empty-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+          <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+          <line x1="12" y1="22.08" x2="12" y2="12"></line>
+        </svg>
+      </div>
+      <h3 class="pr-empty-title">Экспозиция в работе</h3>
+      <p class="pr-empty-desc">В данный момент готовим фотографии и чертежи новых моделей. Следите за обновлениями или свяжитесь с нами для индивидуального расчёта.</p>
+      <button class="pr-empty-btn" type="button">Связаться с нами</button>
+    `;
+    emptyBox.querySelector('.pr-empty-btn').addEventListener('click', ()=>{
+      const field = document.getElementById('userMsg');
+      field.value = `Здравствуйте! Интересует категория «${category.title}». Расскажите, какие варианты доступны?`;
+      field.dispatchEvent(new Event('input', {bubbles: true}));
+      document.getElementById('order').scrollIntoView({behavior: 'smooth', block: 'start'});
+    });
+    grid.replaceChildren(emptyBox);
+  } else {
+    grid.replaceChildren(...category.items.map((item, idx)=>makeProduct(item, idx)));
+  }
+}
+
+function makeProduct(item, index){
+  const article=document.createElement('article');article.className='pr-product';
+  let visualHtml = '';
+  if(item.image){
+    visualHtml = `
+      <div class="pr-product-img-wrap" data-img-zoom="${item.image}" data-caption="${item.name}" title="Нажмите, чтобы открыть во весь экран">
+        <img class="pr-product-img" src="${item.image}" alt="${item.name}">
+        <div class="pr-zoom-badge">🔍 На весь экран</div>
+      </div>
+    `;
+  } else {
+    visualHtml = `<svg class="pr-product-visual" viewBox="0 0 320 190" role="img" aria-label="Схема изделия"><g fill="none" stroke="#500f1c" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">${drawings[item.shape]||drawings.table}</g></svg>`;
+  }
+
+  let adminControls = '';
+  if(isAdmin){
+    adminControls = `
+      <div class="pr-card-controls">
+        <button class="pr-ctrl-btn pr-ctrl-edit" data-idx="${index}">✏ Ред.</button>
+        <button class="pr-ctrl-btn pr-ctrl-del" data-idx="${index}">✕</button>
+      </div>
+    `;
+  }
+
+  article.innerHTML=`${adminControls}${visualHtml}<div class="pr-product-info"><h3></h3><p></p><div class="pr-price">Стоимость — по запросу</div><button class="pr-button" type="button">Обсудить изделие</button></div>`;
+  article.querySelector('h3').textContent=item.name;
+  article.querySelector('p').textContent=item.text;
+
+  if(isAdmin){
+    article.querySelector('.pr-ctrl-edit')?.addEventListener('click', (e)=>{
+      e.stopPropagation();
+      openItemModal(currentCatKey, index);
+    });
+    article.querySelector('.pr-ctrl-del')?.addEventListener('click', (e)=>{
+      e.stopPropagation();
+      if(confirm(`Удалить изделие «${item.name}»?`)){
+        catalog[currentCatKey].items.splice(index, 1);
+        saveCatalog();
+        renderProducts();
+      }
+    });
+  }
+
+  article.querySelector('.pr-button').addEventListener('click',()=>{
+    const field=document.getElementById('userMsg');
+    field.value=`Здравствуйте! Хочу обсудить изделие «${item.name}».`;
+    field.dispatchEvent(new Event('input',{bubbles:true}));
+    document.getElementById('order').scrollIntoView({behavior:'smooth',block:'start'});
+  });
+  return article;
+}
+
+root.querySelectorAll('[data-open]').forEach(button=>button.addEventListener('click',()=>{
+  currentCatKey = button.dataset.open;
+  lastButton=button;
+  renderProducts();
+  button.blur();front.inert=true;front.setAttribute('aria-hidden','true');back.inert=false;back.setAttribute('aria-hidden','false');flipper.classList.add('is-flipped');title.focus({preventScroll:true});
+}));
+
+function close(){returnButton.blur();back.inert=true;back.setAttribute('aria-hidden','true');front.inert=false;front.removeAttribute('aria-hidden');flipper.classList.remove('is-flipped');lastButton?.focus({preventScroll:true});}
+returnButton.addEventListener('click',close);
+root.addEventListener('keydown',event=>{if(event.key==='Escape'&&flipper.classList.contains('is-flipped'))close();});
+
+/* Admin Logic */
+const adminBar=document.getElementById('adminBar');
+const adminModal=document.getElementById('adminModal');
+const adminLoginTrigger=document.getElementById('adminLoginTrigger');
+const adminModalClose=document.getElementById('adminModalClose');
+const adminLoginPane=document.getElementById('adminLoginPane');
+const adminItemPane=document.getElementById('adminItemPane');
+const adminPassInput=document.getElementById('adminPass');
+const adminLoginSubmit=document.getElementById('adminLoginSubmit');
+const adminLogoutBtn=document.getElementById('adminLogoutBtn');
+const adminAddBtn=document.getElementById('adminAddBtn');
+const adminExportBtn=document.getElementById('adminExportBtn');
+
+const editItemName=document.getElementById('editItemName');
+const editItemText=document.getElementById('editItemText');
+const editItemPhotoInput=document.getElementById('editItemPhotoInput');
+const photoPreview=document.getElementById('photoPreview');
+const adminItemSave=document.getElementById('adminItemSave');
+const adminItemCancel=document.getElementById('adminItemCancel');
+
+const adminCategoryPane=document.getElementById('adminCategoryPane');
+const adminHeroPane=document.getElementById('adminHeroPane');
+const heroArtEditBtn=document.getElementById('heroArtEditBtn');
+const editHeroPhotoInput=document.getElementById('editHeroPhotoInput');
+const heroPhotoPreview=document.getElementById('heroPhotoPreview');
+const removeHeroPhotoBtn=document.getElementById('removeHeroPhotoBtn');
+const editHeroSlideText=document.getElementById('editHeroSlideText');
+const editHeroSlideSub=document.getElementById('editHeroSlideSub');
+const adminHeroSave=document.getElementById('adminHeroSave');
+const adminHeroCancel=document.getElementById('adminHeroCancel');
+let currentEditingHeroImageBase64 = null;
+
+let heroSettings = {
+  image: null,
+  slides: ['Стол, который собирает вокруг себя всех','Кровать, которая переживёт три ремонта','Стеллаж в нишу — ровно до миллиметра'],
+  subtext: 'одна идея · одна вещь · ваш интерьер'
+};
+try {
+  const localHero = localStorage.getItem('pr_hero_settings');
+  if(localHero) heroSettings = Object.assign(heroSettings, JSON.parse(localHero));
+} catch(e){}
+
+function saveHeroSettings(){
+  try {
+    localStorage.setItem('pr_hero_settings', JSON.stringify(heroSettings));
+  } catch(e){
+    alert('Не удалось сохранить баннер (изображение слишком большое).');
+  }
+}
+
+function renderHeroUI(){
+  const defaultGraphics = document.getElementById('heroArtDefaultGraphics');
+  const customWrap = document.getElementById('heroArtCustomWrap');
+  const customImg = document.getElementById('heroArtCustomImg');
+  const subEl = document.getElementById('slideSubtext');
+  
+  if(heroSettings.image){
+    defaultGraphics.style.display = 'none';
+    customWrap.style.display = 'block';
+    customImg.src = heroSettings.image;
+  } else {
+    defaultGraphics.style.display = 'block';
+    customWrap.style.display = 'none';
+    customImg.src = '';
+  }
+  if(subEl) subEl.textContent = heroSettings.subtext || 'одна идея · одна вещь · ваш интерьер';
+}
+renderHeroUI();
+
+const editCatKey=document.getElementById('editCatKey');
+const editCatLabel=document.getElementById('editCatLabel');
+const editCatTitle=document.getElementById('editCatTitle');
+const editCatDesc=document.getElementById('editCatDesc');
+const editCatPhotoInput=document.getElementById('editCatPhotoInput');
+const catPhotoPreview=document.getElementById('catPhotoPreview');
+const removeCatPhotoBtn=document.getElementById('removeCatPhotoBtn');
+const adminCatSave=document.getElementById('adminCatSave');
+const adminCatCancel=document.getElementById('adminCatCancel');
+
+let currentEditingImageBase64 = null;
+let currentEditingCatImageBase64 = null;
+
+function updateAdminUI(){
+  if(isAdmin){
+    adminBar.style.display = 'flex';
+    document.body.classList.add('is-admin-mode');
+  } else {
+    adminBar.style.display = 'none';
+    document.body.classList.remove('is-admin-mode');
+  }
+  renderDirectionsFront();
+  renderProducts();
+}
+
+adminLoginTrigger.addEventListener('click', ()=>{
+  if(isAdmin){
+    alert('Вы уже авторизованы в режиме администратора');
+    return;
+  }
+  adminModal.style.display = 'flex';
+  adminLoginPane.style.display = 'block';
+  adminItemPane.style.display = 'none';
+  adminCategoryPane.style.display = 'none';
+  adminHeroPane.style.display = 'none';
+  document.getElementById('adminModalTitle').textContent = 'Вход в панель управления';
+  adminPassInput.value = '';
+  setTimeout(()=>adminPassInput.focus(), 100);
+});
+
+adminModalClose.addEventListener('click', ()=>{ adminModal.style.display = 'none'; });
+adminItemCancel.addEventListener('click', ()=>{ adminModal.style.display = 'none'; });
+adminCatCancel.addEventListener('click', ()=>{ adminModal.style.display = 'none'; });
+adminHeroCancel.addEventListener('click', ()=>{ adminModal.style.display = 'none'; });
+
+adminLoginSubmit.addEventListener('click', ()=>{
+  if(adminPassInput.value === '132860'){
+    isAdmin = true;
+    sessionStorage.setItem('pr_admin', '1');
+    adminModal.style.display = 'none';
+    updateAdminUI();
+  } else {
+    alert('Неверный пароль');
+  }
+});
+
+adminPassInput.addEventListener('keydown', (e)=>{
+  if(e.key === 'Enter') adminLoginSubmit.click();
+});
+
+adminLogoutBtn.addEventListener('click', ()=>{
+  isAdmin = false;
+  sessionStorage.removeItem('pr_admin');
+  updateAdminUI();
+});
+
+function openItemModal(catKey, itemIndex = -1){
+  adminModal.style.display = 'flex';
+  adminLoginPane.style.display = 'none';
+  adminCategoryPane.style.display = 'none';
+  adminItemPane.style.display = 'block';
+  document.getElementById('editItemCat').value = catKey;
+  document.getElementById('editItemIndex').value = itemIndex;
+  
+  currentEditingImageBase64 = null;
+  editItemPhotoInput.value = '';
+  photoPreview.style.display = 'none';
+  photoPreview.innerHTML = '';
+
+  if(itemIndex >= 0){
+    const item = catalog[catKey].items[itemIndex];
+    document.getElementById('adminModalTitle').textContent = 'Редактировать товар';
+    editItemName.value = item.name;
+    editItemText.value = item.text;
+    if(item.image){
+      currentEditingImageBase64 = item.image;
+      photoPreview.innerHTML = `<img src="${item.image}">`;
+      photoPreview.style.display = 'block';
+    }
+  } else {
+    document.getElementById('adminModalTitle').textContent = `Добавить в «${catalog[catKey].title}»`;
+    editItemName.value = '';
+    editItemText.value = '';
+  }
+}
+
+editItemPhotoInput.addEventListener('change', (e)=>{
+  const file = e.target.files[0];
+  if(!file) return;
+  const reader = new FileReader();
+  reader.onload = (event)=>{
+    currentEditingImageBase64 = event.target.result;
+    photoPreview.innerHTML = `<img src="${currentEditingImageBase64}">`;
+    photoPreview.style.display = 'block';
+  };
+  reader.readAsDataURL(file);
+});
+
+adminItemSave.addEventListener('click', ()=>{
+  const catKey = document.getElementById('editItemCat').value;
+  const idx = parseInt(document.getElementById('editItemIndex').value, 10);
+  const name = editItemName.value.trim();
+  const text = editItemText.value.trim();
+
+  if(!name){
+    alert('Укажите название изделия');
+    return;
+  }
+
+  const itemObj = {
+    name,
+    text,
+    shape: 'table',
+    image: currentEditingImageBase64 || null
+  };
+
+  if(idx >= 0){
+    if(!currentEditingImageBase64 && catalog[catKey].items[idx].image){
+      itemObj.image = catalog[catKey].items[idx].image;
+    }
+    catalog[catKey].items[idx] = itemObj;
+  } else {
+    catalog[catKey].items.push(itemObj);
+  }
+
+  saveCatalog();
+  renderProducts();
+  adminModal.style.display = 'none';
+});
+
+function openHeroModal(){
+  adminModal.style.display = 'flex';
+  adminLoginPane.style.display = 'none';
+  adminItemPane.style.display = 'none';
+  adminCategoryPane.style.display = 'none';
+  adminHeroPane.style.display = 'block';
+  document.getElementById('adminModalTitle').textContent = 'Редактировать главный баннер';
+
+  editHeroSlideText.value = (heroSettings.slides && heroSettings.slides.length) ? heroSettings.slides.join('; ') : '';
+  editHeroSlideSub.value = heroSettings.subtext || '';
+  editHeroPhotoInput.value = '';
+  currentEditingHeroImageBase64 = heroSettings.image || null;
+
+  if(heroSettings.image){
+    heroPhotoPreview.innerHTML = `<img src="${heroSettings.image}">`;
+    heroPhotoPreview.style.display = 'block';
+    removeHeroPhotoBtn.style.display = 'inline-block';
+  } else {
+    heroPhotoPreview.style.display = 'none';
+    heroPhotoPreview.innerHTML = '';
+    removeHeroPhotoBtn.style.display = 'none';
+  }
+}
+
+heroArtEditBtn.addEventListener('click', (e)=>{
+  e.stopPropagation();
+  openHeroModal();
+});
+
+editHeroPhotoInput.addEventListener('change', (e)=>{
+  const file = e.target.files[0];
+  if(!file) return;
+  const reader = new FileReader();
+  reader.onload = (event)=>{
+    currentEditingHeroImageBase64 = event.target.result;
+    heroPhotoPreview.innerHTML = `<img src="${currentEditingHeroImageBase64}">`;
+    heroPhotoPreview.style.display = 'block';
+    removeHeroPhotoBtn.style.display = 'inline-block';
+  };
+  reader.readAsDataURL(file);
+});
+
+removeHeroPhotoBtn.addEventListener('click', ()=>{
+  currentEditingHeroImageBase64 = null;
+  editHeroPhotoInput.value = '';
+  heroPhotoPreview.style.display = 'none';
+  heroPhotoPreview.innerHTML = '';
+  removeHeroPhotoBtn.style.display = 'none';
+});
+
+adminHeroSave.addEventListener('click', ()=>{
+  heroSettings.image = currentEditingHeroImageBase64;
+  const rawSlides = editHeroSlideText.value.split(';').map(s=>s.trim()).filter(Boolean);
+  if(rawSlides.length > 0){
+    heroSettings.slides = rawSlides;
+  }
+  heroSettings.subtext = editHeroSlideSub.value.trim() || 'одна идея · одна вещь · ваш интерьер';
+  saveHeroSettings();
+  renderHeroUI();
+  adminModal.style.display = 'none';
+});
+
+function openCategoryModal(catKey){
+  const data = catalog[catKey];
+  if(!data) return;
+  adminModal.style.display = 'flex';
+  adminLoginPane.style.display = 'none';
+  adminItemPane.style.display = 'none';
+  adminHeroPane.style.display = 'none';
+  adminCategoryPane.style.display = 'block';
+  document.getElementById('adminModalTitle').textContent = `Редактировать карточку на главной`;
+
+  editCatKey.value = catKey;
+  editCatLabel.value = data.label || '';
+  editCatTitle.value = data.title || '';
+  editCatDesc.value = data.desc || '';
+  
+  editCatPhotoInput.value = '';
+  currentEditingCatImageBase64 = data.image || null;
+
+  if(data.image){
+    catPhotoPreview.innerHTML = `<img src="${data.image}">`;
+    catPhotoPreview.style.display = 'block';
+    removeCatPhotoBtn.style.display = 'inline-block';
+  } else {
+    catPhotoPreview.style.display = 'none';
+    catPhotoPreview.innerHTML = '';
+    removeCatPhotoBtn.style.display = 'none';
+  }
+}
+
+editCatPhotoInput.addEventListener('change', (e)=>{
+  const file = e.target.files[0];
+  if(!file) return;
+  const reader = new FileReader();
+  reader.onload = (event)=>{
+    currentEditingCatImageBase64 = event.target.result;
+    catPhotoPreview.innerHTML = `<img src="${currentEditingCatImageBase64}">`;
+    catPhotoPreview.style.display = 'block';
+    removeCatPhotoBtn.style.display = 'inline-block';
+  };
+  reader.readAsDataURL(file);
+});
+
+removeCatPhotoBtn.addEventListener('click', ()=>{
+  currentEditingCatImageBase64 = null;
+  editCatPhotoInput.value = '';
+  catPhotoPreview.style.display = 'none';
+  catPhotoPreview.innerHTML = '';
+  removeCatPhotoBtn.style.display = 'none';
+});
+
+adminCatSave.addEventListener('click', ()=>{
+  const k = editCatKey.value;
+  if(!catalog[k]) return;
+  catalog[k].label = editCatLabel.value.trim() || catalog[k].label;
+  catalog[k].title = editCatTitle.value.trim() || catalog[k].title;
+  catalog[k].desc = editCatDesc.value.trim() || catalog[k].desc;
+  catalog[k].image = currentEditingCatImageBase64;
+
+  saveCatalog();
+  renderDirectionsFront();
+  adminModal.style.display = 'none';
+});
+
+document.querySelectorAll('.pr-direction-edit-btn').forEach(btn=>{
+  btn.addEventListener('click', (e)=>{
+    e.stopPropagation();
+    const parent = btn.closest('.pr-direction');
+    if(parent && parent.dataset.cat){
+      openCategoryModal(parent.dataset.cat);
+    }
+  });
+});
+
+adminAddBtn.addEventListener('click', ()=>{
+  if(!flipper.classList.contains('is-flipped')){
+    alert('Сначала откройте нужную категорию в блоке «Направления», чтобы добавить в неё изделие.');
+    document.getElementById('catalog').scrollIntoView({behavior:'smooth'});
+    return;
+  }
+  openItemModal(currentCatKey, -1);
+});
+
+adminExportBtn.addEventListener('click', ()=>{
+  const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(catalog, null, 2));
+  const dl = document.createElement('a');
+  dl.setAttribute("href", dataStr);
+  dl.setAttribute("download", "paul_ritter_catalog.json");
+  dl.click();
+});
+
+// Lightbox Viewer
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightboxImg');
+const lightboxCaption = document.getElementById('lightboxCaption');
+const lightboxClose = document.getElementById('lightboxClose');
+
+function openLightbox(src, caption){
+  lightboxImg.src = src;
+  lightboxCaption.textContent = caption || '';
+  lightbox.classList.add('is-open');
+  lightbox.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox(){
+  lightbox.classList.remove('is-open');
+  lightbox.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+  setTimeout(()=>{ lightboxImg.src = ''; }, 300);
+}
+
+lightbox.addEventListener('click', (e)=>{
+  if(e.target === lightbox || e.target === lightboxClose || e.target.closest('#lightboxClose')){
+    closeLightbox();
+  }
+});
+
+window.addEventListener('keydown', (e)=>{
+  if(e.key === 'Escape' && lightbox.classList.contains('is-open')){
+    closeLightbox();
+  }
+});
+
+document.addEventListener('click', (e)=>{
+  const wrap = e.target.closest('[data-img-zoom]');
+  if(wrap){
+    const src = wrap.dataset.imgZoom;
+    const caption = wrap.dataset.caption;
+    if(src) openLightbox(src, caption);
+  }
+});
+
+// Shortcut Ctrl+Shift+A
+window.addEventListener('keydown', (e)=>{
+  if(e.ctrlKey && e.shiftKey && (e.key === 'A' || e.key === 'a' || e.key === 'Ф' || e.key === 'ф')){
+    adminLoginTrigger.click();
+  }
+});
+
+updateAdminUI();
+})();
+let si=0;
+setInterval(()=>{
+  const sList = (heroSettings && heroSettings.slides && heroSettings.slides.length) ? heroSettings.slides : ['Стол, который собирает вокруг себя всех','Кровать, которая переживёт три ремонта','Стеллаж в нишу — ровно до миллиметра'];
+  si=(si+1)%sList.length;
+  const slideEl = document.getElementById('slideText');
+  if(slideEl){
+    slideEl.animate([{opacity:0,transform:'translateY(6px)'},{opacity:1,transform:'translateY(0)'}],{duration:450});
+    slideEl.textContent=sList[si];
+  }
+},4000);
+const phoneBtn=document.getElementById('phoneBtn'),toast=document.getElementById('toast');phoneBtn.addEventListener('click',async()=>{const raw='89200950520';if(/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)){location.href='tel:+79200950520';return}try{await navigator.clipboard.writeText(raw);toast.textContent='Номер скопирован: 8 (920) 095-05-20';toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),2600)}catch(e){toast.textContent='Позвоните: 8 (920) 095-05-20';toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),2600)}});
+document.getElementById('userPhone').addEventListener('input',e=>{let d=e.target.value.replace(/\D/g,'').replace(/^8/,'7').slice(0,11);if(!d){e.target.value='';return}if(d[0]!=='7')d='7'+d;e.target.value='+7'+(d.length>1?' ('+d.slice(1,4):'')+(d.length>=4?') ':'')+(d.length>4?d.slice(4,7):'')+(d.length>=7?'-':'')+(d.length>7?d.slice(7,9):'')+(d.length>=9?'-':'')+(d.length>9?d.slice(9,11):'')});
+document.getElementById('orderForm').addEventListener('submit',e=>{e.preventDefault();const name=document.getElementById('userName').value,phone=document.getElementById('userPhone').value,msg=document.getElementById('userMsg').value;const text=`Здравствуйте, Пол! Хочу обсудить заказ.%0A%0AИмя: ${encodeURIComponent(name)}%0AТелефон: ${encodeURIComponent(phone)}%0AЧто нужно: ${encodeURIComponent(msg)}`;window.open('https://t.me/Paul_Ritter?text='+text,'_blank')});
+</script>
+</body>
+</html>
