@@ -289,6 +289,30 @@ footer{background:#2c0b13;color:#dcbfa2;padding:48px 0 26px}.footer-grid{display
 .nav .max-contact{cursor:pointer}.nav .max-contact svg{width:22px;height:22px;display:block}
 @media(min-width:1051px) and (max-width:1250px){.nav{gap:16px}.nav .nav-links{gap:20px;font-size:14px}.nav .nav-actions{gap:7px}.nav .phone{padding:10px 12px}}
 @media(max-width:650px){.nav{gap:10px}.nav .nav-actions{gap:7px}.nav .messenger-icon{width:36px;height:36px;padding:8px}.nav .messenger-icon svg{width:20px;height:20px}}
+/* Фотогалерея товаров */
+#catalog .pr-products{align-items:start;align-content:start}
+#catalog .pr-product-img-wrap{height:auto;aspect-ratio:4/3;flex:none;min-height:0;touch-action:pan-y}
+#catalog .pr-product-img{width:100%;height:100%;object-fit:cover;object-position:center;opacity:1;transform:scale(1);transition:opacity .32s ease,transform .42s cubic-bezier(.22,.61,.36,1);will-change:opacity,transform}
+#catalog .pr-product-img.is-changing{opacity:0;transform:scale(1.025)}
+#catalog .pr-product-img-wrap:hover .pr-product-img{transform:scale(1.025)}
+#catalog .pr-product-img-wrap:hover .pr-product-img.is-changing{transform:scale(1.045)}
+@media(prefers-reduced-motion:reduce){#catalog .pr-product-img{transition:none!important}}
+.pr-gallery-dots{position:absolute;left:12px;bottom:12px;display:flex;gap:5px;z-index:2;pointer-events:none}
+.pr-gallery-dot{width:22px;height:3px;border-radius:5px;background:rgba(255,255,255,.55);box-shadow:0 1px 3px #0006}
+.pr-gallery-dot.active{background:#fff}
+.pr-gallery-nav{position:absolute;bottom:10px;right:10px;z-index:3;display:flex;gap:6px}
+.pr-gallery-nav button{width:36px;height:36px;border:1px solid #ffffff88;border-radius:50%;background:#24060bbd;color:#fff;font-size:21px;cursor:pointer}
+.pr-gallery-nav button:focus-visible{outline:2px solid white;outline-offset:2px}
+.pr-gallery-hint{position:absolute;top:12px;left:12px;background:#24060ba6;color:white;border-radius:5px;padding:4px 7px;font:11px Arial,sans-serif;pointer-events:none}
+.pr-product-img-wrap .pr-zoom-badge{bottom:54px}
+#photoPreview.admin-preview{max-height:230px;overflow:auto;display:none}
+.pr-edit-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.pr-edit-photo{position:relative;min-width:0}
+#photoPreview .pr-edit-photo img{height:88px;width:100%;object-fit:cover;border-radius:6px}
+.pr-edit-photo button{position:absolute;top:3px;right:3px;border:0;border-radius:4px;background:#24060bdb;color:white;padding:4px 7px;cursor:pointer}
+.pr-edit-photo span{display:block;font:11px Arial,sans-serif;margin-top:3px;color:#67464b}
+.admin-modal-box{max-height:calc(100dvh - 32px);overflow-y:auto}
+@media(max-width:650px){#catalog .pr-product-img-wrap{aspect-ratio:4/3}}
 </style>
 </head>
 <body>
@@ -373,9 +397,10 @@ footer{background:#2c0b13;color:#dcbfa2;padding:48px 0 26px}.footer-grid{display
         <textarea id="editItemText" rows="3" placeholder="Краткое описание характеристик"></textarea>
       </div>
       <div class="admin-field">
-        <label>Фотография изделия</label>
+        <label for="editItemPhotoInput">Фотографии изделия</label>
         <div class="admin-file-wrap">
-          <input type="file" id="editItemPhotoInput" accept="image/*">
+          <input type="file" id="editItemPhotoInput" accept="image/*" multiple>
+          <small style="display:block;margin-top:6px;color:#76565b">Можно выбрать несколько фото. Первое — обложка. Нажмите ×, чтобы удалить фото.</small>
           <div id="photoPreview" class="admin-preview"></div>
         </div>
       </div>
@@ -471,8 +496,10 @@ for(const k in defaultCatalog){
 function saveCatalog(){
   try {
     localStorage.setItem('pr_catalog_data', JSON.stringify(catalog));
+    return true;
   } catch(e){
-    alert('Не удалось сохранить в память браузера (возможно, файл слишком большой).');
+    alert('Не удалось сохранить: память браузера заполнена. Попробуйте выбрать меньше фотографий или уменьшить их размер.');
+    return false;
   }
 }
 
@@ -543,10 +570,11 @@ function renderProducts(){
 function makeProduct(item, index){
   const article=document.createElement('article');article.className='pr-product';
   let visualHtml = '';
-  if(item.image){
+  const images = Array.isArray(item.images) && item.images.length ? item.images.filter(Boolean) : (item.image ? [item.image] : []);
+  if(images.length){
     visualHtml = `
-      <div class="pr-product-img-wrap" data-img-zoom="${item.image}" data-caption="${item.name}" title="Нажмите, чтобы открыть во весь экран">
-        <img class="pr-product-img" src="${item.image}" alt="${item.name}">
+      <div class="pr-product-img-wrap" data-img-zoom="" data-caption="" title="Нажмите, чтобы открыть во весь экран">
+        <img class="pr-product-img" alt="">
         <div class="pr-zoom-badge">🔍 На весь экран</div>
       </div>
     `;
@@ -567,6 +595,51 @@ function makeProduct(item, index){
   article.innerHTML=`${adminControls}${visualHtml}<div class="pr-product-info"><h3></h3><p></p><div class="pr-price">Стоимость — по запросу</div><button class="pr-button" type="button">Обсудить изделие</button></div>`;
   article.querySelector('h3').textContent=item.name;
   article.querySelector('p').textContent=item.text;
+  if(images.length){
+    const wrap=article.querySelector('.pr-product-img-wrap');
+    const img=wrap.querySelector('.pr-product-img');
+    wrap.dataset.caption=item.name;
+    img.alt=item.name;
+    let active=0, dots=[];
+    let changeTimer=null;
+    function showPhoto(i, immediate=false){
+      const next=Math.max(0,Math.min(images.length-1,i));
+      if(!immediate && next===active && img.src)return;
+      active=next;
+      wrap.dataset.imgZoom=images[active];
+      dots.forEach((dot,n)=>dot.classList.toggle('active',n===active));
+      clearTimeout(changeTimer);
+      if(immediate || !img.src){
+        img.src=images[active];
+        img.classList.remove('is-changing');
+        return;
+      }
+      img.classList.add('is-changing');
+      changeTimer=setTimeout(()=>{
+        img.src=images[active];
+        requestAnimationFrame(()=>img.classList.remove('is-changing'));
+      },180);
+    }
+    if(images.length>1){
+      const indicators=document.createElement('div');
+      indicators.className='pr-gallery-dots';
+      indicators.setAttribute('aria-hidden','true');
+      images.forEach(()=>{const dot=document.createElement('span');dot.className='pr-gallery-dot';indicators.appendChild(dot);dots.push(dot);});
+      wrap.appendChild(indicators);
+      const nav=document.createElement('div');nav.className='pr-gallery-nav';
+      const prev=document.createElement('button'), next=document.createElement('button');
+      prev.type=next.type='button';prev.textContent='‹';next.textContent='›';prev.setAttribute('aria-label','Предыдущее фото');next.setAttribute('aria-label','Следующее фото');
+      prev.addEventListener('click',e=>{e.stopPropagation();showPhoto((active+images.length-1)%images.length);});
+      next.addEventListener('click',e=>{e.stopPropagation();showPhoto((active+1)%images.length);});
+      nav.append(prev,next);wrap.appendChild(nav);
+      wrap.addEventListener('pointermove',e=>{if(e.pointerType!=='mouse'||e.target.closest('button'))return;const r=wrap.getBoundingClientRect();if(r.width)showPhoto(Math.floor(Math.max(0,Math.min(.999999,(e.clientX-r.left)/r.width))*images.length));});
+      wrap.addEventListener('pointerleave',e=>{if(e.pointerType==='mouse')showPhoto(0);});
+      let startX=null,startY=null;
+      wrap.addEventListener('touchstart',e=>{startX=e.touches[0].clientX;startY=e.touches[0].clientY;},{passive:true});
+      wrap.addEventListener('touchend',e=>{if(startX===null)return;const dx=e.changedTouches[0].clientX-startX,dy=e.changedTouches[0].clientY-startY;if(Math.abs(dx)>45&&Math.abs(dx)>Math.abs(dy))showPhoto((active+(dx<0?1:-1)+images.length)%images.length);startX=null;},{passive:true});
+    }
+    showPhoto(0, true);
+  }
 
   if(isAdmin){
     article.querySelector('.pr-ctrl-edit')?.addEventListener('click', (e)=>{
@@ -682,7 +755,8 @@ const removeCatPhotoBtn=document.getElementById('removeCatPhotoBtn');
 const adminCatSave=document.getElementById('adminCatSave');
 const adminCatCancel=document.getElementById('adminCatCancel');
 
-let currentEditingImageBase64 = null;
+let currentEditingImages = [];
+let itemPhotoLoadToken = 0;
 let currentEditingCatImageBase64 = null;
 
 function updateAdminUI(){
@@ -746,7 +820,9 @@ function openItemModal(catKey, itemIndex = -1){
   document.getElementById('editItemCat').value = catKey;
   document.getElementById('editItemIndex').value = itemIndex;
   
-  currentEditingImageBase64 = null;
+  itemPhotoLoadToken++;
+  adminItemSave.disabled = false;
+  currentEditingImages = [];
   editItemPhotoInput.value = '';
   photoPreview.style.display = 'none';
   photoPreview.innerHTML = '';
@@ -756,11 +832,8 @@ function openItemModal(catKey, itemIndex = -1){
     document.getElementById('adminModalTitle').textContent = 'Редактировать товар';
     editItemName.value = item.name;
     editItemText.value = item.text;
-    if(item.image){
-      currentEditingImageBase64 = item.image;
-      photoPreview.innerHTML = `<img src="${item.image}">`;
-      photoPreview.style.display = 'block';
-    }
+    currentEditingImages = Array.isArray(item.images) && item.images.length ? item.images.filter(Boolean).slice() : (item.image ? [item.image] : []);
+    renderItemPhotoPreview();
   } else {
     document.getElementById('adminModalTitle').textContent = `Добавить в «${catalog[catKey].title}»`;
     editItemName.value = '';
@@ -768,16 +841,47 @@ function openItemModal(catKey, itemIndex = -1){
   }
 }
 
-editItemPhotoInput.addEventListener('change', (e)=>{
-  const file = e.target.files[0];
-  if(!file) return;
-  const reader = new FileReader();
-  reader.onload = (event)=>{
-    currentEditingImageBase64 = event.target.result;
-    photoPreview.innerHTML = `<img src="${currentEditingImageBase64}">`;
-    photoPreview.style.display = 'block';
-  };
-  reader.readAsDataURL(file);
+function renderItemPhotoPreview(){
+  photoPreview.replaceChildren();
+  photoPreview.style.display=currentEditingImages.length?'block':'none';
+  if(!currentEditingImages.length)return;
+  const list=document.createElement('div');list.className='pr-edit-gallery';
+  currentEditingImages.forEach((src,index)=>{
+    const box=document.createElement('div');box.className='pr-edit-photo';
+    const img=document.createElement('img');img.src=src;img.alt=`Фото ${index+1}`;
+    const remove=document.createElement('button');remove.type='button';remove.textContent='×';remove.setAttribute('aria-label',`Удалить фото ${index+1}`);
+    remove.addEventListener('click',()=>{currentEditingImages.splice(index,1);renderItemPhotoPreview();});
+    const caption=document.createElement('span');caption.textContent=index===0?'Обложка':`Фото ${index+1}`;
+    box.append(img,remove,caption);list.appendChild(box);
+  });
+  photoPreview.appendChild(list);
+}
+function prepareItemPhoto(file){
+  return new Promise((resolve,reject)=>{
+    const reader=new FileReader();reader.onerror=()=>reject(new Error('Не удалось прочитать файл'));
+    reader.onload=()=>{
+      const image=new Image();image.onerror=()=>reject(new Error('Не удалось открыть изображение'));
+      image.onload=()=>{
+        try{
+          const scale=Math.min(1,1600/Math.max(image.naturalWidth,image.naturalHeight));
+          const canvas=document.createElement('canvas');canvas.width=Math.max(1,Math.round(image.naturalWidth*scale));canvas.height=Math.max(1,Math.round(image.naturalHeight*scale));
+          const ctx=canvas.getContext('2d');if(!ctx)throw new Error('Нет поддержки обработки фото');
+          ctx.fillStyle='#fff';ctx.fillRect(0,0,canvas.width,canvas.height);ctx.drawImage(image,0,0,canvas.width,canvas.height);
+          resolve(canvas.toDataURL('image/jpeg',.82));
+        }catch(err){reject(err);}
+      };image.src=reader.result;
+    };reader.readAsDataURL(file);
+  });
+}
+editItemPhotoInput.addEventListener('change', async (e)=>{
+  const files=Array.from(e.target.files);if(!files.length)return;
+  const token=++itemPhotoLoadToken;adminItemSave.disabled=true;
+  try{
+    const loaded=await Promise.all(files.map(prepareItemPhoto));
+    if(token!==itemPhotoLoadToken)return;
+    currentEditingImages.push(...loaded);renderItemPhotoPreview();
+  }catch(err){if(token===itemPhotoLoadToken)alert('Не удалось обработать фото. Попробуйте другой файл JPG или PNG.');}
+  finally{if(token===itemPhotoLoadToken){adminItemSave.disabled=false;editItemPhotoInput.value='';}}
 });
 
 adminItemSave.addEventListener('click', ()=>{
@@ -791,23 +895,24 @@ adminItemSave.addEventListener('click', ()=>{
     return;
   }
 
+  const previous = idx >= 0 ? catalog[catKey].items[idx] : null;
   const itemObj = {
+    ...(previous || {}),
     name,
     text,
-    shape: 'table',
-    image: currentEditingImageBase64 || null
+    shape: previous?.shape || 'table',
+    image: currentEditingImages[0] || null,
+    images: currentEditingImages.slice()
   };
 
-  if(idx >= 0){
-    if(!currentEditingImageBase64 && catalog[catKey].items[idx].image){
-      itemObj.image = catalog[catKey].items[idx].image;
-    }
-    catalog[catKey].items[idx] = itemObj;
-  } else {
-    catalog[catKey].items.push(itemObj);
-  }
+  if(idx >= 0) catalog[catKey].items[idx] = itemObj;
+  else catalog[catKey].items.push(itemObj);
 
-  saveCatalog();
+  if(!saveCatalog()){
+    if(idx >= 0) catalog[catKey].items[idx] = previous;
+    else catalog[catKey].items.pop();
+    return;
+  }
   renderProducts();
   adminModal.style.display = 'none';
 });
