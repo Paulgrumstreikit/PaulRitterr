@@ -627,6 +627,19 @@ footer{background:#2c0b13;color:#dcbfa2;padding:48px 0 26px}.footer-grid{display
 
 @media(max-width:650px){#catalog .pr-product-img-wrap{aspect-ratio:4/3}}
 </style>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=114114488', 'ym');
+
+    ym(114114488, 'init', {ssr:true, webvisor:true, clickmap:true, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/114114488" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
 </head>
 <body>
 <div class="copy-toast" id="toast">Номер скопирован</div>
@@ -907,7 +920,7 @@ setInterval(()=>{
     slideEl.textContent=sList[si];
   }
 },4000);
-const phoneBtn=document.getElementById('phoneBtn'),toast=document.getElementById('toast');phoneBtn.addEventListener('click',async()=>{const raw='89200950520';if(/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)){location.href='tel:+79200950520';return}try{await navigator.clipboard.writeText(raw);toast.textContent='Номер скопирован: 8 (920) 095-05-20';toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),2600)}catch(e){toast.textContent='Позвоните: 8 (920) 095-05-20';toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),2600)}});
+const phoneBtn=document.getElementById('phoneBtn'),toast=document.getElementById('toast');phoneBtn.addEventListener('click',async()=>{if(typeof ym==='function')ym(114114488,'reachGoal','phone_click');const raw='89200950520';if(/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)){location.href='tel:+79200950520';return}try{await navigator.clipboard.writeText(raw);toast.textContent='Номер скопирован: 8 (920) 095-05-20';toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),2600)}catch(e){toast.textContent='Позвоните: 8 (920) 095-05-20';toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),2600)}});
 document.getElementById('userPhone').addEventListener('input',e=>{let d=e.target.value.replace(/\D/g,'').replace(/^8/,'7').slice(0,11);if(!d){e.target.value='';return}if(d[0]!=='7')d='7'+d;e.target.value='+7'+(d.length>1?' ('+d.slice(1,4):'')+(d.length>=4?') ':'')+(d.length>4?d.slice(4,7):'')+(d.length>=7?'-':'')+(d.length>7?d.slice(7,9):'')+(d.length>=9?'-':'')+(d.length>9?d.slice(9,11):'')});
 function buildOrderText(){
   const name=document.getElementById('userName').value.trim()||'Не указано';
@@ -916,29 +929,39 @@ function buildOrderText(){
   return `Здравствуйте, Пол! Хочу обсудить заказ.\n\nИмя: ${name}\nТелефон: ${phone}\nЧто нужно: ${msg}`;
 }
 
+function trackGoal(name){try{if(typeof ym==='function')ym(114114488,'reachGoal',name);}catch(e){}}
 document.getElementById('submitTg').addEventListener('click',()=>{
+  trackGoal('telegram_click');
   const text=encodeURIComponent(buildOrderText());
   window.open('https://t.me/Paul_Ritter?text='+text,'_blank');
 });
 
 document.getElementById('submitMax').addEventListener('click',()=>{
+  trackGoal('max_click');
   window.open('https://max.ru/u/f9LHodD0cOJd4x2Mf9qGFVoxIQA_CLtfkQeMS8ATccqau1fTfxTuKUZTxLI','_blank');
 });
 
 document.getElementById('submitWa').addEventListener('click',()=>{
+  trackGoal('whatsapp_click');
   const text=encodeURIComponent(buildOrderText());
   window.open('https://wa.me/79200950520?text='+text,'_blank');
 });
 
 document.getElementById('submitVk').addEventListener('click',()=>{
+  trackGoal('vk_click');
   window.open('https://vk.ru/paul_ritter','_blank');
 });
 
 document.getElementById('orderForm').addEventListener('submit',e=>{
   e.preventDefault();
+  trackGoal('form_submit');
   document.getElementById('submitTg').click();
 });
 
+document.querySelectorAll('a[href^="tel:"]').forEach(a=>a.addEventListener('click',()=>trackGoal('phone_click')));
+document.querySelectorAll('a[href*="t.me/Paul_Ritter"]').forEach(a=>a.addEventListener('click',()=>trackGoal('telegram_click')));
+document.querySelectorAll('a[href*="max.ru"]').forEach(a=>a.addEventListener('click',()=>trackGoal('max_click')));
+document.querySelectorAll('a[href*="vk.ru/paul_ritter"]').forEach(a=>a.addEventListener('click',()=>trackGoal('vk_click')));
 const navBurger=document.getElementById('navBurger'),mobileNav=document.getElementById('mobileNav');
 if(navBurger&&mobileNav){
   navBurger.addEventListener('click',()=>{const open=mobileNav.classList.toggle('open');navBurger.setAttribute('aria-expanded',String(open));});
